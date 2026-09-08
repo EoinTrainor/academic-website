@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #f6f1e6;
+  --color-ink-raised: #ede4d1;
+  --color-ink-line: #d8cdb4;
+  --color-paper: #201c16;
+  --color-paper-dim: #6e6656;
+  --color-steel: #3b5166;
+  --color-steel-dim: #26374a;
+  --color-halpha: #a32b1e;
+  --color-halpha-dim: #7a1f16;
+
+  --font-display: var(--font-stix), "Iowan Old Style", serif;
+  --font-body: var(--font-plex-sans), -apple-system, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-halpha-dim);
+  color: var(--color-ink);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 1.5px solid var(--color-halpha);
+  outline-offset: 3px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
