@@ -17,12 +17,14 @@ export default function GitHubProjectCard({ repo }: { repo: Repo }) {
           </li>
         ))}
       </ul>
-      <a
-        href={repo.href}
-        className="mt-4 inline-block text-sm text-halpha hover:text-paper transition-colors"
-      >
-        View repository
-      </a>
+      {!repo.href.startsWith("[") ? (
+        <a
+          href={repo.href}
+          className="mt-4 inline-block text-sm text-halpha hover:text-paper transition-colors"
+        >
+          View repository
+        </a>
+      ) : null}
     </article>
   );
 }

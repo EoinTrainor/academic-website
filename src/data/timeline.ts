@@ -22,7 +22,8 @@ export const RESEARCH_JOURNEY: TimelineEntry[] = [
     period: "Undergraduate",
     description:
       "Developed and evaluated machine-learning methods for extracting information from electrocardiogram data, combining signal processing, statistical analysis and scientific programming.",
-    award: "Award-winning research project — [Exact award title to be added]",
+    award:
+      "Award-winning research project — ECG Classification Methods with Explorative Denoising Techniques and Feature Detection Strategies Enhanced by Machine Learning",
     href: "/research/ecg-machine-learning",
   },
   {
@@ -62,7 +63,8 @@ export const ACADEMIC_TIMELINE: TimelineEntry[] = [
     institution: "Irish National Astronomy Meeting",
     title: "INAM 2026",
     period: "2026",
-    description: "Presented astrophysics research at INAM. [Exact presentation title to be added]",
+    description:
+      "Presented “Difference Imaging and Multi-Band Light Curve Analysis of High Energy Binary Systems” at INAM.",
   },
 ];
 

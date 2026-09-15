@@ -9,14 +9,15 @@ export type Output = {
 export const OUTPUTS: Output[] = [
   {
     kind: "Presentation",
-    title: "[INAM presentation title]",
+    title: "Difference Imaging and Multi-Band Light Curve Analysis of High Energy Binary Systems",
     venue: "Irish National Astronomy Meeting (INAM)",
     year: "2026",
-    note: "Presented astrophysics research at INAM. [Presentation PDF / slides to be added]",
+    note: "Presented astrophysics research at INAM.",
   },
   {
     kind: "Award",
-    title: "[ECG award title]",
+    title:
+      "ECG Classification Methods with Explorative Denoising Techniques and Feature Detection Strategies Enhanced by Machine Learning",
     venue: "Machine Learning & ECG — undergraduate research project",
     year: "Queen's University Belfast",
     note: "Award-winning undergraduate research project.",

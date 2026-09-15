@@ -12,7 +12,7 @@ const CHANNELS = [
   { label: "GitHub", value: SITE.github, href: SITE.github },
   { label: "LinkedIn", value: SITE.linkedin, href: SITE.linkedin },
   { label: "ORCID", value: SITE.orcid, href: SITE.orcid },
-];
+].filter((channel) => !channel.value.startsWith("["));
 
 export default function ContactPage() {
   return (

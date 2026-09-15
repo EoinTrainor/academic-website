@@ -4,8 +4,8 @@ export const SITE = {
   url: "https://eointrainor.com",
   description:
     "Research Master's student in astrophysics at University College Cork, working on observational and computational approaches to compact stellar systems.",
-  email: "[Email]",
-  github: "[GitHub URL]",
+  email: "eoin722@gmail.com",
+  github: "https://github.com/EoinTrainor",
   linkedin: "[LinkedIn]",
   orcid: "[ORCID]",
   cvHref: "/cv",

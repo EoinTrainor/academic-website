@@ -35,7 +35,9 @@ const SECTIONS = [
   },
   {
     title: "Presentations",
-    items: ["Irish National Astronomy Meeting (INAM), 2026 — [Exact presentation title to be added]"],
+    items: [
+      'Irish National Astronomy Meeting (INAM), 2026 — "Difference Imaging and Multi-Band Light Curve Analysis of High Energy Binary Systems"',
+    ],
   },
 ];
 
@@ -43,13 +45,6 @@ export default function CVPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 pb-24 pt-14 md:px-10">
       <SectionHeader heading="CV" intro="A summary of education, research and technical skills." />
-
-      <a
-        href="/cv/eoin-trainor-cv.pdf"
-        className="mt-8 inline-flex items-center gap-2 border border-ink-line rounded-sm px-4 py-2.5 text-sm text-paper hover:border-halpha hover:text-halpha transition-colors"
-      >
-        Download CV (PDF) — [CV PDF]
-      </a>
 
       <div className="mt-16 space-y-14">
         {SECTIONS.map((section) => (

@@ -95,15 +95,17 @@ export default function ProjectLayout({ project }: { project: ResearchProject })
           </ul>
         </div>
 
-        <div>
-          <h2 className="font-display text-2xl text-paper">Related code</h2>
-          <a
-            href={project.githubHref}
-            className="mt-3 inline-block text-sm text-halpha hover:text-paper transition-colors"
-          >
-            View code on GitHub
-          </a>
-        </div>
+        {!project.githubHref.startsWith("[") ? (
+          <div>
+            <h2 className="font-display text-2xl text-paper">Related code</h2>
+            <a
+              href={project.githubHref}
+              className="mt-3 inline-block text-sm text-halpha hover:text-paper transition-colors"
+            >
+              View code on GitHub
+            </a>
+          </div>
+        ) : null}
       </section>
     </div>
   );

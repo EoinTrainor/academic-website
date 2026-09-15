@@ -76,7 +76,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
       "Physical interpretation",
     ],
     figureLabel: "[HAWK-I image / light curve / compact-binary visualisation]",
-    githubHref: "[Project repository]",
+    githubHref: "https://github.com/EoinTrainor/gx339-4-lightcurve",
     status: "Active",
     sections: {
       motivation:
