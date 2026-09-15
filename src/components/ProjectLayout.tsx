@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ResearchProject } from "@/data/research";
 import ScientificFigure from "./ScientificFigure";
+import MassFunctionEquation from "./MassFunctionEquation";
 
 export default function ProjectLayout({ project }: { project: ResearchProject }) {
   const s = project.sections;
@@ -56,6 +57,7 @@ export default function ProjectLayout({ project }: { project: ResearchProject })
         <div>
           <h2 className="font-display text-2xl text-paper">Research question</h2>
           <p className="mt-3 text-base leading-relaxed text-paper-dim">{s.question}</p>
+          {s.massFunctionNote ? <MassFunctionEquation description={s.massFunctionNote} /> : null}
         </div>
 
         <div>

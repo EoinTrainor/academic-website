@@ -18,6 +18,7 @@ export type ResearchProject = {
     motivation: string;
     motivationFigure?: ResearchFigure;
     question: string;
+    massFunctionNote?: string;
     data: string;
     methods: string[];
     contribution: string;
@@ -92,6 +93,8 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
       },
       question:
         "Can we isolate variable flux from the data to construct a light curve that represents orbital variability of the system's donor star? And from that light curve, can we constrain the angle of inclination of the system, relate it to the mass function, and derive the mass of the black hole?",
+      massFunctionNote:
+        "f(M) is the spectroscopic mass function, in solar masses, and is measurable directly from the orbital light curve without prior knowledge of the system's inclination. M_BH is the mass of the black hole, M_2 is the mass of the donor star, and i is the orbital inclination angle. Since sin³i ≤ 1, f(M) alone sets a strict lower limit on M_BH; combining it with an independent constraint on i from the light-curve shape allows the black hole's mass to be solved for directly.",
       data: "Quiescent-epoch VLT/HAWK-I Ks-band imaging, with outburst epochs excluded using Swift/BAT classification.",
       methods: [
         "ZOGY-style difference imaging",
