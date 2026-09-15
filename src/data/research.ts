@@ -1,3 +1,9 @@
+export type ResearchFigure = {
+  label: string;
+  src?: string;
+  caption?: string;
+};
+
 export type ResearchProject = {
   slug: string;
   title: string;
@@ -15,7 +21,7 @@ export type ResearchProject = {
     methods: string[];
     contribution: string;
     status: string;
-    figures: string[];
+    figures: ResearchFigure[];
     tools: string[];
   };
 };
@@ -56,8 +62,8 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
       status:
         "Pipeline development is ongoing. Photometric validation and orbital light-curve analysis are in progress.",
       figures: [
-        "[Six-panel difference-imaging figure]",
-        "[Orbital light curve, folded on ephemeris]",
+        { label: "[Six-panel difference-imaging figure]" },
+        { label: "[Orbital light curve, folded on ephemeris]" },
       ],
       tools: ["Python", "Astropy", "Photutils", "NumPy", "SciPy", "Matplotlib"],
     },
@@ -92,9 +98,15 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
       status:
         "Ten quiescent epochs (of thirteen total) have been retained after excluding outburst epochs. Pipeline and modelling work toward a dynamical black hole mass measurement is ongoing.",
       figures: [
-        "[HAWK-I Ks-band difference image]",
-        "[Infrared light curve with ICARUS model fit]",
-        "[Corner plot: inclination / mass-ratio posterior]",
+        { label: "[HAWK-I Ks-band difference image]" },
+        { label: "[Infrared light curve with ICARUS model fit]" },
+        { label: "[Corner plot: inclination / mass-ratio posterior]" },
+        {
+          label: "NS-BH mass gap",
+          src: "/figures/gx339-mass-gap.png",
+          caption:
+            "The neutron star-black hole mass gap (roughly 2-5 M☉) overlaps the Heida et al. (2017) mass estimate for GX 339−4 (2.3-9.5 M☉), so the black hole's true mass could fall within this poorly constrained range.",
+        },
       ],
       tools: [
         "Python",
@@ -137,7 +149,7 @@ export const OTHER_RESEARCH: ResearchProject[] = [
       contribution:
         "This was an undergraduate research project under Dr Peter Keys at Queen's University Belfast, written up as a fifteen-page paper.",
       status: "Completed as an undergraduate research project at Queen's University Belfast.",
-      figures: ["[H-alpha chromosphere image]"],
+      figures: [{ label: "[H-alpha chromosphere image]" }],
       tools: ["Python", "Image processing tools"],
     },
   },
@@ -167,7 +179,10 @@ export const OTHER_RESEARCH: ResearchProject[] = [
         "I designed and implemented a custom dual-wall ECG classification architecture, achieving 87% accuracy across six conditions, as an undergraduate research project at Queen's University Belfast.",
       status:
         "Completed undergraduate research project, awarded the Data Intellect: Analytics Physics Prize (2025).",
-      figures: ["[Model architecture diagram]", "[Confusion matrix / performance summary]"],
+      figures: [
+        { label: "[Model architecture diagram]" },
+        { label: "[Confusion matrix / performance summary]" },
+      ],
       tools: ["Python", "Machine learning framework", "Signal-processing libraries"],
     },
   },

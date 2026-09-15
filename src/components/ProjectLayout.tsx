@@ -81,7 +81,13 @@ export default function ProjectLayout({ project }: { project: ResearchProject })
             <h2 className="font-display text-2xl text-paper">Key figures</h2>
             <div className="mt-4 grid gap-6 sm:grid-cols-2">
               {s.figures.map((f) => (
-                <ScientificFigure key={f} label={f} aspect="square" />
+                <ScientificFigure
+                  key={f.label}
+                  label={f.label}
+                  src={f.src}
+                  caption={f.caption}
+                  aspect="square"
+                />
               ))}
             </div>
           </div>
