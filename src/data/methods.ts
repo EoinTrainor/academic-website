@@ -32,7 +32,7 @@ export const METHODS: Method[] = [
   {
     title: "Statistical Analysis & Inference",
     description:
-      "Bayesian analysis, Markov Chain Monte Carlo (MCMC), resampling and permutation tests, injection–recovery experiments, uncertainty analysis, negative controls and model comparison.",
+      "Bayesian analysis, Markov Chain Monte Carlo (MCMC), resampling and permutation tests, injection-recovery experiments, uncertainty analysis, negative controls and model comparison.",
   },
   {
     title: "Physical & Computational Modelling",
@@ -45,31 +45,31 @@ export const RESEARCH_INTERESTS: Method[] = [
   {
     title: "Fundamental Physics & Mathematics",
     description:
-      "Quantum mechanics, quantum electrodynamics, fields, symmetry and the mathematical structures underlying physical law. A particular fascination with the point where abstract mathematics becomes a description of physical reality — and what those structures might reveal about the deeper workings of the Universe.",
+      "Quantum mechanics, quantum electrodynamics, fields, symmetry and the mathematical structures underlying physical law. A particular fascination with the point where abstract mathematics becomes a description of physical reality, and what those structures might reveal about the deeper workings of the Universe.",
   },
   {
-    title: "Astronomical Imaging & Detectors",
+    title: "Astronomical Imaging",
     description:
       "The complete path from physical phenomenon to scientific measurement: photons from an astrophysical source, telescope optics, interaction with the solid-state physics of CCD and CMOS detectors, image formation and calibration, through to the final data used to infer the underlying physics.",
   },
   {
-    title: "High-Energy & Time-Domain Astrophysics",
+    title: "High-Energy Astrophysics",
     description:
       "Black holes, neutron stars and compact binary systems, particularly where variability can be used to constrain otherwise inaccessible physical properties. Photometry, orbital behaviour, irradiation and faint time-dependent signals as probes of extreme astrophysical environments.",
   },
   {
     title: "Solution & Process Design",
     description:
-      "I enjoy taking open-ended problems and mapping out the route to a solution — finding the right data, deciding what needs to be measured or calculated, working out how each stage should connect, and building the process needed to reach a reliable answer.",
+      "I enjoy taking open-ended problems and mapping out the route to a solution: finding the right data, deciding what needs to be measured or calculated, working out how each stage should connect, and building the process needed to reach a reliable answer.",
   },
   {
     title: "Hydrogen Energy & Infrastructure",
     description:
-      "Developing hydrogen infrastructure as part of the transition toward renewable energy — from production and storage through transport, distribution and integration into wider energy systems. Particularly interested in where physics, computation and quantitative modelling can help solve the system-level problems involved.",
+      "Climate change is a genuine passion of mine, and developing hydrogen infrastructure is where I'd like to direct it, from production and storage through transport, distribution and integration into wider energy systems. Particularly interested in where physics, computation and quantitative modelling can help solve the system-level problems involved.",
   },
   {
     title: "Physics Beyond a Single Discipline",
     description:
-      "A broad interest in understanding how physical systems work, rather than remaining confined to one narrow subject area — from optics, electromagnetism and solid-state physics to energy systems and astrophysics. The underlying appeal is the same: identify the governing principles, build the right model and understand what nature is doing.",
+      "A broad interest in understanding how physical systems work, rather than remaining confined to one narrow subject area, spanning optics, electromagnetism, quantum mechanics and solid-state physics through to energy systems and astrophysics. The underlying appeal is the same: identify the governing principles, build the right model and understand what nature is doing.",
   },
 ];

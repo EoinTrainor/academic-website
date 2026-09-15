@@ -79,7 +79,7 @@ export default function Home() {
       <section className="mx-auto max-w-5xl px-6 py-20 md:px-10">
         <SectionHeader
           heading="Methods & Research Interests"
-          intro="A quantitative toolkit built around observation, computation and inference — applied to astrophysics, and transferable beyond it."
+          intro="A quantitative toolkit built around observation, computation and inference, applied to astrophysics and transferable beyond it."
         />
         <div className="mt-10">
           <p className="font-mono-label text-xs text-halpha">Methods</p>
