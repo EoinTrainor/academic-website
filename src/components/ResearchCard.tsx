@@ -23,9 +23,9 @@ export default function ResearchCard({ project }: { project: ResearchProject }) 
         <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
           <Link
             href={`/research/${project.slug}`}
-            className="text-sm text-halpha hover:text-paper transition-colors"
+            className="inline-flex items-center gap-2 border border-ink-line rounded-sm px-4 py-2.5 text-sm text-paper hover:border-halpha hover:text-halpha transition-colors"
           >
-            Read project
+            Read project →
           </Link>
           {!project.githubHref.startsWith("[") ? (
             <a
