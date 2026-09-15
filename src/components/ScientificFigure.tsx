@@ -29,35 +29,34 @@ export default function ScientificFigure({
   accent = false,
   src,
 }: ScientificFigureProps) {
+  if (src) {
+    return (
+      <figure>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={withBasePath(src)} alt={label} className="w-full h-auto" />
+        {caption ? (
+          <figcaption className="mt-1 text-xs text-paper-dim/80 leading-relaxed">{caption}</figcaption>
+        ) : null}
+      </figure>
+    );
+  }
+
   return (
     <figure>
       <div
         className={`relative overflow-hidden rounded-sm border border-ink-line bg-ink-raised ${ASPECT[aspect]}`}
-        style={
-          src
-            ? undefined
-            : {
-                backgroundImage:
-                  "linear-gradient(to right, rgba(32,28,22,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(32,28,22,0.06) 1px, transparent 1px)",
-                backgroundSize: "28px 28px",
-              }
-        }
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(32,28,22,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(32,28,22,0.06) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+        }}
       >
         {accent ? (
           <span className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-halpha/40" />
         ) : null}
-        {src ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={withBasePath(src)}
-            alt={label}
-            className="absolute inset-0 h-full w-full object-contain p-4"
-          />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
-            <span className="font-mono-label text-xs text-paper-dim/70">{label}</span>
-          </div>
-        )}
+        <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
+          <span className="font-mono-label text-xs text-paper-dim/70">{label}</span>
+        </div>
         {meta ? (
           <span className="absolute bottom-2 right-3 font-mono-label text-[10px] text-paper-dim/50">
             {meta}
