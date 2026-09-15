@@ -42,6 +42,16 @@ export default function ProjectLayout({ project }: { project: ResearchProject })
         <div>
           <h2 className="font-display text-2xl text-paper">Scientific motivation</h2>
           <p className="mt-3 text-base leading-relaxed text-paper-dim">{s.motivation}</p>
+          {s.motivationFigure ? (
+            <div className="mt-6 max-w-md">
+              <ScientificFigure
+                label={s.motivationFigure.label}
+                src={s.motivationFigure.src}
+                caption={s.motivationFigure.caption}
+                aspect="square"
+              />
+            </div>
+          ) : null}
         </div>
 
         <div>

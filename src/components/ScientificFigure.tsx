@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/basePath";
+
 type ScientificFigureProps = {
   label: string;
   caption?: string;
@@ -46,7 +48,11 @@ export default function ScientificFigure({
         ) : null}
         {src ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={src} alt={label} className="absolute inset-0 h-full w-full object-contain p-4" />
+          <img
+            src={withBasePath(src)}
+            alt={label}
+            className="absolute inset-0 h-full w-full object-contain p-4"
+          />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
             <span className="font-mono-label text-xs text-paper-dim/70">{label}</span>

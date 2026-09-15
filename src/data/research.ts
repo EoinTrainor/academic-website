@@ -16,6 +16,7 @@ export type ResearchProject = {
   status: "Active" | "Ongoing" | "Completed";
   sections: {
     motivation: string;
+    motivationFigure?: ResearchFigure;
     question: string;
     data: string;
     methods: string[];
@@ -83,6 +84,12 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
     sections: {
       motivation:
         "GX 339−4 is a black-hole X-ray binary whose infrared light is shaped by its donor star, accretion flow and compact jet. Separating these contributions in quiescence is a route to a dynamical mass measurement for the black hole, one of relatively few such systems where this is possible. Its mass has never been properly constrained: the most recent literature estimate (Heida et al. 2017) places it at 2.3-9.5 M☉, a range wide enough that GX 339−4's black hole could sit within the neutron star-black hole mass gap, the range of masses in which neither type of compact object has yet been directly observed.",
+      motivationFigure: {
+        label: "NS-BH mass gap",
+        src: "/figures/gx339-mass-gap.png",
+        caption:
+          "The neutron star-black hole mass gap (roughly 2-5 M☉) overlaps the Heida et al. (2017) mass estimate for GX 339−4 (2.3-9.5 M☉), so the black hole's true mass could fall within this poorly constrained range.",
+      },
       question:
         "What do multi-epoch infrared observations of GX 339−4 imply for the system's orbital variability, and how much of the infrared light comes from the donor star versus the accretion flow and jet?",
       data: "Quiescent-epoch VLT/HAWK-I Ks-band imaging, with outburst epochs excluded using Swift/BAT classification.",
@@ -101,12 +108,6 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
         { label: "[HAWK-I Ks-band difference image]" },
         { label: "[Infrared light curve with ICARUS model fit]" },
         { label: "[Corner plot: inclination / mass-ratio posterior]" },
-        {
-          label: "NS-BH mass gap",
-          src: "/figures/gx339-mass-gap.png",
-          caption:
-            "The neutron star-black hole mass gap (roughly 2-5 M☉) overlaps the Heida et al. (2017) mass estimate for GX 339−4 (2.3-9.5 M☉), so the black hole's true mass could fall within this poorly constrained range.",
-        },
       ],
       tools: [
         "Python",
