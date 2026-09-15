@@ -4,6 +4,7 @@ export type Output = {
   venue: string;
   year: string;
   note: string;
+  href?: string;
 };
 
 export const OUTPUTS: Output[] = [
@@ -20,5 +21,6 @@ export const OUTPUTS: Output[] = [
     venue: "Undergraduate research project, Queen's University Belfast",
     year: "2025",
     note: "Awarded for “ECG Classification Methods with Explorative Denoising Techniques and Feature Detection Strategies Enhanced by Machine Learning.”",
+    href: "/research/ecg-machine-learning",
   },
 ];
