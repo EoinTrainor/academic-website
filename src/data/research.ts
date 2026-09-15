@@ -51,7 +51,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
         "Orbital light-curve folding and analysis",
       ],
       contribution:
-        "I am building the full pipeline — from raw frames through PSF modelling, image subtraction and photometric extraction, to the orbital light curve itself — and validating each stage against known sources in the field.",
+        "I am building the full pipeline, from raw frames through PSF modelling, image subtraction and photometric extraction, to the orbital light curve itself, and validating each stage against known sources in the field.",
       status:
         "Pipeline development is ongoing. Photometric validation and orbital light-curve analysis are in progress.",
       figures: [
