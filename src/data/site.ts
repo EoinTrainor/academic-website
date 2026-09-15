@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Eoin Trainor",
-  role: "Astrophysics · Computational Physics · Scientific Computing",
+  role: "Observational Astronomy · Image Processing · Computational Modelling",
   url: "https://eointrainor.com",
   description:
     "Research Master's student in astrophysics at University College Cork, working on observational and computational approaches to compact stellar systems.",
