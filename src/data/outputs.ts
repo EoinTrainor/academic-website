@@ -17,8 +17,8 @@ export const OUTPUTS: Output[] = [
   {
     kind: "Award",
     title: "Data Intellect: Analytics Physics Prize",
-    venue: "Machine Learning & ECG — undergraduate research project",
-    year: "Queen's University Belfast",
+    venue: "Undergraduate research project, Queen's University Belfast",
+    year: "2025",
     note: "Awarded for “ECG Classification Methods with Explorative Denoising Techniques and Feature Detection Strategies Enhanced by Machine Learning.”",
   },
 ];
