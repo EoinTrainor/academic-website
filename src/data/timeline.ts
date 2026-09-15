@@ -3,6 +3,7 @@ export type TimelineEntry = {
   title: string;
   period: string;
   description: string;
+  status?: "Active" | "Completed";
   award?: string;
   href?: string;
 };
@@ -10,10 +11,11 @@ export type TimelineEntry = {
 export const RESEARCH_JOURNEY: TimelineEntry[] = [
   {
     institution: "Queen's University Belfast",
-    title: "Solar Chromosphere — H-alpha Observations",
+    title: "Solar Chromosphere — Hα Observations",
     period: "Undergraduate",
     description:
-      "Used narrow-band H-alpha observations to investigate structure and dynamics in the solar chromosphere, developing experience in observational astronomy, image analysis and interpretation of astrophysical data.",
+      "Used narrow-band Hα observations to study solar filaments and flare eruptions, measuring eruption velocities and using them to estimate the local magnetic field strength of the solar atmosphere.",
+    status: "Completed",
     href: "/research/solar-ha",
   },
   {
@@ -21,25 +23,27 @@ export const RESEARCH_JOURNEY: TimelineEntry[] = [
     title: "Machine Learning for ECG Analysis",
     period: "Undergraduate",
     description:
-      "Developed and evaluated machine-learning methods for extracting information from electrocardiogram data, combining signal processing, statistical analysis and scientific programming.",
-    award:
-      "Award-winning research project — ECG Classification Methods with Explorative Denoising Techniques and Feature Detection Strategies Enhanced by Machine Learning",
+      "Applied signal processing, feature detection and machine-learning techniques to noisy electrocardiogram data, using statistical analysis to evaluate classification performance and the reliability of extracted physiological features, to improve medical diagnostics.",
+    status: "Completed",
+    award: "Data Intellect: Analytics Physics Prize",
     href: "/research/ecg-machine-learning",
   },
   {
     institution: "University College Cork",
-    title: "Difference Imaging & Time-Domain Astronomy",
+    title: "PSR B1957+20",
     period: "MSc",
     description:
-      "Extended the earlier data-analysis and image-processing experience into a full difference-imaging pipeline for time-domain photometry of a compact binary.",
+      "Developing an empirical-PSF difference-imaging pipeline to recover the faint orbital light curve of the irradiated companion to the black-widow pulsar PSR B1957+20 from crowded, variable-seeing ground-based observations. The recovered modulation will be modelled to constrain the system geometry and companion heating, including the day–night temperature contrast, and contribute to dynamical constraints on the neutron-star mass.",
+    status: "Active",
     href: "/research/difference-imaging",
   },
   {
     institution: "University College Cork",
-    title: "Compact Binary Modelling",
+    title: "GX 339−4",
     period: "MSc",
     description:
-      "Moved from image analysis toward physical modelling and inference — using infrared light curves to constrain the properties of a black-hole binary system.",
+      "Combining difference imaging with ICARUS binary light-curve modelling to isolate the near-infrared orbital signature of the donor star in the black-hole X-ray binary GX 339−4 from variable accretion-flow and jet emission, with the aim of constraining the system geometry and improving the dynamical measurement of the black-hole mass.",
+    status: "Active",
     href: "/research/compact-binaries",
   },
 ];

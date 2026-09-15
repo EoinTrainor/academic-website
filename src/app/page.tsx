@@ -37,7 +37,7 @@ export default function Home() {
         <SpectralRule label="Research across scales" className="mb-16" />
         <SectionHeader
           heading="Research Journey"
-          intro="Observation → data → computation → physical inference — the same research approach, applied across increasingly complex systems."
+          intro="Different systems, same physicist&rsquo;s toolkit — isolate the signal, extract the features, test them statistically, and model the underlying physics."
         />
         <div className="mt-12 max-w-2xl">
           <ResearchTimeline entries={RESEARCH_JOURNEY} />

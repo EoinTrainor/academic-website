@@ -8,9 +8,16 @@ export default function ResearchTimeline({ entries }: { entries: TimelineEntry[]
       {entries.map((entry, i) => {
         const content = (
           <>
-            <p className="font-mono-label text-[11px] text-paper-dim/70">
-              {entry.institution} · {entry.period}
-            </p>
+            <div className="flex flex-wrap items-center gap-2">
+              <p className="font-mono-label text-[11px] text-paper-dim/70">
+                {entry.institution} · {entry.period}
+              </p>
+              {entry.status ? (
+                <span className="font-mono-label text-[10px] text-halpha border border-halpha/40 rounded-sm px-1.5 py-0.5">
+                  {entry.status}
+                </span>
+              ) : null}
+            </div>
             <h3 className="mt-1.5 font-display text-xl text-paper">{entry.title}</h3>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-paper-dim">
               {entry.description}

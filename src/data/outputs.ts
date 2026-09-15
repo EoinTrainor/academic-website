@@ -16,10 +16,9 @@ export const OUTPUTS: Output[] = [
   },
   {
     kind: "Award",
-    title:
-      "ECG Classification Methods with Explorative Denoising Techniques and Feature Detection Strategies Enhanced by Machine Learning",
+    title: "Data Intellect: Analytics Physics Prize",
     venue: "Machine Learning & ECG — undergraduate research project",
     year: "Queen's University Belfast",
-    note: "Award-winning undergraduate research project.",
+    note: "Awarded for “ECG Classification Methods with Explorative Denoising Techniques and Feature Detection Strategies Enhanced by Machine Learning.”",
   },
 ];
