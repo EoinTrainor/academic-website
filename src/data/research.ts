@@ -95,7 +95,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
         "Can we isolate variable flux from the data to construct a light curve that represents orbital variability of the system's donor star? And from that light curve, can we constrain the angle of inclination of the system, relate it to the mass function, and derive the mass of the black hole?",
       massFunctionNote:
         "f(M) is the spectroscopic mass function, in solar masses, and is measurable directly from the orbital light curve without prior knowledge of the system's inclination. M_BH is the mass of the black hole, M_2 is the mass of the donor star, and i is the orbital inclination angle. Since sin³i ≤ 1, f(M) alone sets a strict lower limit on M_BH; combining it with an independent constraint on i from the light-curve shape allows the black hole's mass to be solved for directly.",
-      data: "Quiescent-epoch VLT/HAWK-I Ks-band imaging, with outburst epochs excluded using Swift/BAT classification.",
+      data: "GX 339−4 has an orbital period of just 1.76 days, too short to cover in a single ground-based observing block. To build a light curve regardless, we monitored the system with the Swift/BAT X-ray telescope to confirm its accretion disc remained in quiescence, and observed with HAWK-I whenever a free window opened up over the course of the season. Phase-folding these quiescent-epoch observations onto the orbital period required around 20 epochs, spread widely enough in time to give the random phase coverage needed to model the light curve.",
       methods: [
         "ZOGY-style difference imaging",
         "ICARUS binary light-curve modelling",
