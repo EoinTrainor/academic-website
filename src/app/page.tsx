@@ -13,6 +13,7 @@ import { RESEARCH_JOURNEY } from "@/data/timeline";
 import { OUTPUTS } from "@/data/outputs";
 import { REPOS } from "@/data/repos";
 import { SITE } from "@/data/site";
+import { METHODS, RESEARCH_INTERESTS } from "@/data/methods";
 
 export default function Home() {
   const featured = getResearchBySlug("difference-imaging")!;
@@ -81,7 +82,16 @@ export default function Home() {
           intro="A quantitative toolkit built around observation, computation and inference — applied to astrophysics, and transferable beyond it."
         />
         <div className="mt-10">
-          <MethodsGrid />
+          <p className="font-mono-label text-xs text-halpha">Methods</p>
+          <div className="mt-6">
+            <MethodsGrid items={METHODS} />
+          </div>
+        </div>
+        <div className="mt-16">
+          <p className="font-mono-label text-xs text-halpha">Research Interests</p>
+          <div className="mt-6">
+            <MethodsGrid items={RESEARCH_INTERESTS} />
+          </div>
         </div>
       </section>
 
