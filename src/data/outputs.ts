@@ -10,9 +10,9 @@ export const OUTPUTS: Output[] = [
   {
     kind: "Presentation",
     title: "Difference Imaging and Multi-Band Light Curve Analysis of High Energy Binary Systems",
-    venue: "Irish National Astronomy Meeting (INAM)",
+    venue: "Irish National Astronomy Meeting (INAM), Maynooth University",
     year: "2026",
-    note: "Presented astrophysics research at INAM.",
+    note: "Presented work to date from my Research Master's, covering difference imaging and multi-band light-curve analysis of high-energy binary systems.",
   },
   {
     kind: "Award",

@@ -64,7 +64,7 @@ export const ACADEMIC_TIMELINE: TimelineEntry[] = [
       "Focus on compact objects, time-domain astronomy, difference imaging, photometry and computational modelling, supervised by Dr Mark Kennedy.",
   },
   {
-    institution: "Irish National Astronomy Meeting",
+    institution: "Irish National Astronomy Meeting, Maynooth University",
     title: "INAM 2026",
     period: "2026",
     description:
