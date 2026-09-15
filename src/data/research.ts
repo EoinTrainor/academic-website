@@ -4,6 +4,7 @@ export type ResearchProject = {
   subtitle: string;
   summary: string;
   tags: string[];
+  abstract?: string;
   figureLabel: string;
   githubHref: string;
   status: "Active" | "Ongoing" | "Completed";
@@ -64,17 +65,12 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
   {
     slug: "compact-binaries",
     title: "GX 339−4",
-    subtitle: "Constraining compact binary systems through infrared variability",
+    subtitle: "Constraining the Mass of the Black Hole in GX 339−4",
     summary:
       "Analysing multi-epoch VLT/HAWK-I observations of the black-hole X-ray binary GX 339−4 to investigate orbital variability and the contribution of its companion star, accretion flow and jet.",
-    tags: [
-      "VLT / HAWK-I",
-      "Infrared astronomy",
-      "Time-domain analysis",
-      "Compact binaries",
-      "Image processing",
-      "Physical interpretation",
-    ],
+    tags: [],
+    abstract:
+      "We observed GX 339−4 using near-infrared (NIR) Ks-band photometry over the 2025 Spring/Summer observing campaign, taken with the HAWK-I instrument on the European Southern Observatory (ESO)'s Very Large Telescope (VLT).",
     figureLabel: "[HAWK-I image / light curve / compact-binary visualisation]",
     githubHref: "https://github.com/EoinTrainor/gx339-4-lightcurve",
     status: "Active",

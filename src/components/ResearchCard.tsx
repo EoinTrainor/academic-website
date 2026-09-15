@@ -10,16 +10,22 @@ export default function ResearchCard({ project }: { project: ResearchProject }) 
         <h3 className="font-display text-2xl text-paper">{project.title}</h3>
         <p className="mt-1 text-sm text-steel">{project.subtitle}</p>
         <p className="mt-4 text-sm leading-relaxed text-paper-dim">{project.summary}</p>
-        <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
-          {project.tags.map((tag) => (
-            <li
-              key={tag}
-              className="font-mono-label text-[11px] text-paper-dim/80 border border-ink-line rounded-sm px-2 py-1"
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
+        {project.abstract ? (
+          <p className="mt-5 text-sm leading-relaxed text-paper-dim/90 italic border-l border-ink-line pl-4">
+            {project.abstract}
+          </p>
+        ) : (
+          <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
+            {project.tags.map((tag) => (
+              <li
+                key={tag}
+                className="font-mono-label text-[11px] text-paper-dim/80 border border-ink-line rounded-sm px-2 py-1"
+              >
+                {tag}
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
           <Link
             href={`/research/${project.slug}`}

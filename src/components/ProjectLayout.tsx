@@ -16,16 +16,22 @@ export default function ProjectLayout({ project }: { project: ResearchProject })
           {project.title}
         </h1>
         <p className="mt-3 text-lg text-steel">{project.subtitle}</p>
-        <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
-          {project.tags.map((tag) => (
-            <li
-              key={tag}
-              className="font-mono-label text-[11px] text-paper-dim/80 border border-ink-line rounded-sm px-2 py-1"
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
+        {project.abstract ? (
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-paper-dim italic border-l border-ink-line pl-4">
+            {project.abstract}
+          </p>
+        ) : (
+          <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
+            {project.tags.map((tag) => (
+              <li
+                key={tag}
+                className="font-mono-label text-[11px] text-paper-dim/80 border border-ink-line rounded-sm px-2 py-1"
+              >
+                {tag}
+              </li>
+            ))}
+          </ul>
+        )}
       </header>
 
       <div className="mt-10">
