@@ -91,7 +91,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
           "The neutron star-black hole mass gap (roughly 2-5 M☉) overlaps the Heida et al. (2017) mass estimate for GX 339−4 (2.3-9.5 M☉), so the black hole's true mass could fall within this poorly constrained range.",
       },
       question:
-        "What do multi-epoch infrared observations of GX 339−4 imply for the system's orbital variability, and how much of the infrared light comes from the donor star versus the accretion flow and jet?",
+        "Can we isolate variable flux from the data to construct a light curve that represents orbital variability of the system's donor star? And from that light curve, can we constrain the angle of inclination of the system, relate it to the mass function, and derive the mass of the black hole?",
       data: "Quiescent-epoch VLT/HAWK-I Ks-band imaging, with outburst epochs excluded using Swift/BAT classification.",
       methods: [
         "ZOGY-style difference imaging",
