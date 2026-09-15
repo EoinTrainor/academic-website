@@ -34,7 +34,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
       "Python",
       "Statistical analysis",
     ],
-    figureLabel: "[Research figure — six-panel difference-imaging sequence]",
+    figureLabel: "[Research figure: six-panel difference-imaging sequence]",
     githubHref: "[Project repository]",
     status: "Active",
     sections: {
@@ -80,7 +80,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
     status: "Active",
     sections: {
       motivation:
-        "GX 339−4 is a black-hole X-ray binary whose infrared light is shaped by its donor star, accretion flow and compact jet. Separating these contributions in quiescence is a route to a dynamical mass measurement for the black hole — one of relatively few such systems where this is possible.",
+        "GX 339−4 is a black-hole X-ray binary whose infrared light is shaped by its donor star, accretion flow and compact jet. Separating these contributions in quiescence is a route to a dynamical mass measurement for the black hole, one of relatively few such systems where this is possible.",
       question:
         "What do multi-epoch infrared observations of GX 339−4 imply for the system's orbital variability, and how much of the infrared light comes from the donor star versus the accretion flow and jet?",
       data: "Quiescent-epoch VLT/HAWK-I Ks-band imaging, with outburst epochs excluded using Swift/BAT classification.",
@@ -92,13 +92,13 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
         "Corner-plot diagnostics for parameter degeneracies (e.g. inclination–mass-ratio)",
       ],
       contribution:
-        "I built the data-reduction pipeline end-to-end — diagnostics, difference imaging and photometric extraction — and assembled a literature-sourced parameter set for the ICARUS light-curve model, each value attributed to its source paper. I am now running the MCMC inference toward a dynamical mass estimate.",
+        "I built the data-reduction pipeline end-to-end (diagnostics, difference imaging and photometric extraction) and assembled a literature-sourced parameter set for the ICARUS light-curve model, each value attributed to its source paper. I am now running the MCMC inference toward a dynamical mass estimate.",
       status:
         "Ten quiescent epochs (of thirteen total) have been retained after excluding outburst epochs. Pipeline and modelling work toward a dynamical black hole mass measurement is ongoing.",
       figures: [
         "[HAWK-I Ks-band difference image]",
         "[Infrared light curve with ICARUS model fit]",
-        "[Corner plot — inclination / mass-ratio posterior]",
+        "[Corner plot: inclination / mass-ratio posterior]",
       ],
       tools: [
         "Python",
@@ -129,7 +129,7 @@ export const OTHER_RESEARCH: ResearchProject[] = [
     status: "Completed",
     sections: {
       motivation:
-        "The H-alpha line, at 656.28 nm, is one of the most direct windows onto the solar chromosphere — the layer between the visible photosphere and the outer corona, where structures such as filaments and fibrils form and evolve on short timescales.",
+        "The H-alpha line, at 656.28 nm, is one of the most direct windows onto the solar chromosphere, the layer between the visible photosphere and the outer corona, where structures such as filaments and fibrils form and evolve on short timescales.",
       question:
         "What can narrow-band H-alpha imaging reveal about structure and dynamics in the solar chromosphere?",
       data: "Narrow-band H-alpha solar imaging, [observation dates and instrument to be added].",
@@ -169,7 +169,8 @@ export const OTHER_RESEARCH: ResearchProject[] = [
       ],
       contribution:
         "I designed and implemented a custom dual-wall ECG classification architecture, achieving 87% accuracy across six conditions, as an undergraduate research project at Queen's University Belfast.",
-      status: "Completed — undergraduate award-winning research project. [Exact award title to be added]",
+      status:
+        "Completed undergraduate research project, awarded the Data Intellect: Analytics Physics Prize (2025).",
       figures: ["[Model architecture diagram]", "[Confusion matrix / performance summary]"],
       tools: ["Python", "Machine learning framework", "Signal-processing libraries"],
     },
