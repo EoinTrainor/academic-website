@@ -12,7 +12,7 @@ export const OUTPUTS: Output[] = [
     title: "Difference Imaging and Multi-Band Light Curve Analysis of High Energy Binary Systems",
     venue: "Irish National Astronomy Meeting (INAM), Maynooth University",
     year: "2026",
-    note: "Presented work to date from my Research Master's, covering difference imaging and multi-band light-curve analysis of high-energy binary systems.",
+    note: "Presented work from my Research Master’s on isolating the variable flux associated with the donor stars in low-mass X-ray binaries, with the aim of recovering and modelling their orbital light curves to constrain the physical parameters of the systems. The work focused on the black-widow millisecond pulsar PSR B1957+20 and the black-hole X-ray binary GX 339−4.",
   },
   {
     kind: "Award",
