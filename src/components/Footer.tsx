@@ -5,7 +5,7 @@ import SpectralRule from "./SpectralRule";
 export default function Footer() {
   return (
     <footer className="mx-auto max-w-5xl px-6 pb-16 pt-4 md:px-10">
-      <SpectralRule label="656.28 nm" className="mb-12" />
+      <SpectralRule className="mb-12" />
       <div className="grid gap-10 md:grid-cols-2">
         <div>
           <h2 className="font-display text-2xl text-paper text-balance">
