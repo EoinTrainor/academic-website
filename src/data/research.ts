@@ -37,7 +37,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
   {
     slug: "difference-imaging",
     title: "PSR B1957+20",
-    subtitle: "Multi-band photometry of the irradiated companion",
+    subtitle: "Multi-band photometry and difference imaging of the original black-widow pulsar",
     summary:
       "Applying a PSF-matched difference-imaging pipeline to the black-widow pulsar PSR B1957+20, using simultaneous five-band HiPERCAM photometry to trace the irradiated companion's temperature and orbital modulation.",
     tags: [
