@@ -7,6 +7,7 @@ type ScientificFigureProps = {
   aspect?: "wide" | "square" | "tall";
   accent?: boolean;
   src?: string;
+  video?: string;
 };
 
 const ASPECT: Record<string, string> = {
@@ -28,7 +29,28 @@ export default function ScientificFigure({
   aspect = "wide",
   accent = false,
   src,
+  video,
 }: ScientificFigureProps) {
+  if (video) {
+    return (
+      <figure>
+        <video
+          src={withBasePath(video)}
+          className="w-full h-auto rounded-sm border border-ink-line"
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls
+          aria-label={label}
+        />
+        {caption ? (
+          <figcaption className="mt-1 text-xs text-paper-dim/80 leading-relaxed">{caption}</figcaption>
+        ) : null}
+      </figure>
+    );
+  }
+
   if (src) {
     return (
       <figure>

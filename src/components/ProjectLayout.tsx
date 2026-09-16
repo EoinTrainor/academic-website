@@ -36,7 +36,7 @@ export default function ProjectLayout({ project }: { project: ResearchProject })
       </header>
 
       <div className="mt-10">
-        <ScientificFigure label={project.figureLabel} aspect="wide" accent />
+        <ScientificFigure label={project.figureLabel} src={project.figureSrc} aspect="wide" accent />
       </div>
 
       <section className="mt-14 space-y-14">
@@ -60,6 +60,26 @@ export default function ProjectLayout({ project }: { project: ResearchProject })
           {s.massFunctionNote ? <MassFunctionEquation description={s.massFunctionNote} /> : null}
         </div>
 
+        {s.physics ? (
+          <div>
+            <h2 className="font-display text-2xl text-paper">The physics</h2>
+            <p className="mt-3 text-base leading-relaxed text-paper-dim">{s.physics}</p>
+            {s.physicsFigures && s.physicsFigures.length ? (
+              <div className="mt-4 grid gap-6 sm:grid-cols-2">
+                {s.physicsFigures.map((f) => (
+                  <ScientificFigure
+                    key={f.label}
+                    label={f.label}
+                    src={f.src}
+                    caption={f.caption}
+                    aspect="square"
+                  />
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
         <div>
           <h2 className="font-display text-2xl text-paper">Data &amp; observations</h2>
           <p className="mt-3 text-base leading-relaxed text-paper-dim">{s.data}</p>
@@ -75,6 +95,15 @@ export default function ProjectLayout({ project }: { project: ResearchProject })
               </li>
             ))}
           </ul>
+          {s.methodsFigure ? (
+            <div className="mt-5 max-w-lg">
+              <ScientificFigure
+                label={s.methodsFigure.label}
+                src={s.methodsFigure.src}
+                caption={s.methodsFigure.caption}
+              />
+            </div>
+          ) : null}
         </div>
 
         <div>
@@ -96,6 +125,7 @@ export default function ProjectLayout({ project }: { project: ResearchProject })
                   key={f.label}
                   label={f.label}
                   src={f.src}
+                  video={f.video}
                   caption={f.caption}
                   aspect="square"
                 />

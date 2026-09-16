@@ -10,3 +10,10 @@ CLAUDE.md
 
 # Scratch staging folder for images not yet moved into public/
 /images/
+/media/
+
+# TypeScript build cache
+tsconfig.tsbuildinfo
+
+# Scratch preview files
+_tmp_preview.html

@@ -5,7 +5,7 @@ import ScientificFigure from "./ScientificFigure";
 export default function ResearchCard({ project }: { project: ResearchProject }) {
   return (
     <article className="grid gap-6 border-t border-ink-line pt-8 md:grid-cols-2 md:gap-10">
-      <ScientificFigure label={project.figureLabel} meta={project.status} />
+      <ScientificFigure label={project.figureLabel} src={project.figureSrc} meta={project.status} />
       <div className="flex flex-col">
         <h3 className="font-display text-2xl text-paper">{project.title}</h3>
         <p className="mt-1 text-sm text-steel">{project.subtitle}</p>
