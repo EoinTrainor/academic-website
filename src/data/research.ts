@@ -40,15 +40,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
     subtitle: "Multi-band photometry and difference imaging of the original black-widow pulsar",
     summary:
       "Applying a PSF-matched difference-imaging pipeline to the black-widow pulsar PSR B1957+20, using simultaneous five-band HiPERCAM photometry to trace the irradiated companion's temperature and orbital modulation.",
-    tags: [
-      "Time-domain astronomy",
-      "Difference imaging",
-      "HiPERCAM",
-      "Multi-band photometry",
-      "Empirical PSF modelling",
-      "Python",
-      "Statistical analysis",
-    ],
+    tags: [],
     figureLabel: "HiPERCAM multi-band difference-imaging sequence",
     figureSrc: "/figures/psrb1957-diffimaging-panels.png",
     githubHref: "[Project repository]",
