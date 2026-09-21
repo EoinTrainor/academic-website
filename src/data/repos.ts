@@ -29,7 +29,7 @@ export const REPOS: Repo[] = [
   {
     name: "ECG Machine Learning",
     description:
-      "Custom dual-wall neural architecture for multi-class cardiac condition classification from ECG signal data.",
+      "Python analysis of ECG signals: denoising, PQRST feature detection and Random Forest classification of normal and abnormal recordings.",
     tags: ["Python", "Machine learning", "Signal processing", "Statistical analysis"],
     href: "[Project repository]",
     status: "Completed",

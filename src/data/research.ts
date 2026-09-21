@@ -215,34 +215,42 @@ export const OTHER_RESEARCH: ResearchProject[] = [
   {
     slug: "ecg-machine-learning",
     title: "Machine Learning & ECG",
-    subtitle: "Award-winning research in signal processing and classification",
+    subtitle: "Award-winning undergraduate research in signal processing, feature detection and machine learning",
     summary:
-      "Developed and evaluated machine-learning methods for extracting information from electrocardiogram data, combining signal processing, statistical analysis and scientific programming.",
+      "An undergraduate team project at Queen's University Belfast on ECG classification, combining Fourier and wavelet denoising, explicit PQRST feature detection and Random Forest machine learning.",
     tags: ["Python", "Machine learning", "Signal processing", "Statistical analysis"],
-    figureLabel: "[ECG classification architecture diagram]",
+    figureLabel: "ECG signal-processing and classification pipeline",
     githubHref: "[Project repository]",
     status: "Completed",
     sections: {
       motivation:
-        "Electrocardiogram (ECG) signals are a rich, noisy time-series domain that rewards the same quantitative toolkit used in physics: signal processing, statistical validation and careful model evaluation, applied here to a biomedical dataset rather than an astrophysical one.",
+        "An electrocardiogram records the electrical activity of the heart as a noisy time-dependent signal. The project treated it as a physical time series: what could be isolated in frequency space, which structures had to stay localised in time, and how measurements could become features for machine learning.",
       question:
-        "Can a custom neural architecture reliably classify cardiac conditions directly from ECG signal data?",
-      data: "[Dataset details to be added]",
+        "Can signal-processing techniques be used to suppress noise while preserving diagnostically relevant ECG structure, and can those extracted features improve machine-learning classification of normal and abnormal cardiac activity?",
+      data: "ECG recordings from publicly available PhysioNet databases, processed in Python.",
       methods: [
-        "Signal pre-processing and feature extraction",
-        "Custom dual-wall neural network architecture",
-        "Multi-class classification across six cardiac conditions",
-        "Statistical validation of model performance",
+        "Denoising: frequency-domain cut-offs, median filtering and Db4 discrete wavelet transforms",
+        "Fast Fourier Transform and power spectral density analysis",
+        "PQRST feature detection, intervals, heart rate and heart-rate variability",
+        "Statistical analysis of feature distributions",
+        "Random Forest classification combined with engineered ECG features",
       ],
       contribution:
-        "I designed and implemented a custom dual-wall ECG classification architecture, achieving 87% accuracy across six conditions, as an undergraduate research project at Queen's University Belfast.",
+        "A collaborative undergraduate project. My work contributed to the computational development of the ECG analysis pipeline, applying Python, signal-processing methods, feature extraction and machine-learning techniques.",
       status:
         "Completed undergraduate research project, awarded the Data Intellect: Analytics Physics Prize (2025).",
-      figures: [
-        { label: "[Model architecture diagram]" },
-        { label: "[Confusion matrix / performance summary]" },
+      figures: [],
+      tools: [
+        "Python",
+        "NumPy",
+        "SciPy",
+        "scikit-learn",
+        "Signal processing",
+        "Fast Fourier Transform",
+        "Discrete Wavelet Transform",
+        "Random Forest classification",
+        "Statistical feature analysis",
       ],
-      tools: ["Python", "Machine learning framework", "Signal-processing libraries"],
     },
   },
 ];
