@@ -214,11 +214,18 @@ export const OTHER_RESEARCH: ResearchProject[] = [
   },
   {
     slug: "ecg-machine-learning",
-    title: "Machine Learning & ECG",
+    title: "Improving Cardiac Diagnostics Through Machine Learning",
     subtitle: "Award-winning undergraduate research in signal processing, feature detection and machine learning",
     summary:
       "An undergraduate team project at Queen's University Belfast on ECG classification, combining Fourier and wavelet denoising, explicit PQRST feature detection and Random Forest machine learning.",
-    tags: ["Python", "Machine learning", "Signal processing", "Statistical analysis"],
+    tags: [
+      "Python",
+      "Machine learning",
+      "Signal processing",
+      "Denoising",
+      "Feature detection",
+      "Statistical analysis",
+    ],
     figureLabel: "ECG signal-processing and classification pipeline",
     githubHref: "[Project repository]",
     status: "Completed",

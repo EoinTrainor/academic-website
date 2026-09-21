@@ -388,13 +388,14 @@ export default function Page() {
           <h3 className="pt-4 font-display text-xl text-paper">Beyond binary classification</h3>
           <p className="text-base leading-relaxed text-paper-dim">
             The later stages of the work also explored moving beyond a binary normal or abnormal
-            decision. A multi-class pipeline used learned feature extraction, in the form of an
+            decision. A multi-class approach used learned feature extraction, in the form of an
             autoencoder, together with a Random Forest classifier to distinguish between normal
             sinus rhythm, myocardial infarction, bundle branch block and atrial fibrillation.
           </p>
           <p className="text-base leading-relaxed text-paper-dim">
-            This was an extension of the project. It is separate from the normal versus abnormal
-            result quoted above.
+            This remained an exploratory extension of the project, and finalising it was beyond
+            the time constraints. It is separate from the normal versus abnormal result quoted
+            above.
           </p>
           <FallbackFigure
             label="Multi-class ECG classification workflow or performance visualisation"
@@ -410,8 +411,9 @@ export default function Page() {
           <p className="text-base leading-relaxed text-paper-dim">
             This was a collaborative undergraduate research project completed at Queen&rsquo;s
             University Belfast. My work contributed to the computational development of the ECG
-            analysis pipeline, applying Python, signal-processing methods, feature extraction and
-            machine-learning techniques to a real biomedical time-series problem.
+            analysis pipeline, applying Python and signal-processing and denoising methods in
+            temporal, Fourier and wavelet space, and designing the feature extraction and
+            machine-learning techniques used on a real biomedical time-series problem.
           </p>
           <p className="text-base leading-relaxed text-paper-dim">
             The project was particularly valuable in developing the way I now approach
@@ -431,30 +433,23 @@ export default function Page() {
           <p className="text-base leading-relaxed text-paper-dim">
             Awarded the Data Intellect: Analytics Physics Prize (2025).
           </p>
+          <p className="text-base leading-relaxed text-paper-dim">
+            The binary model reached approximately 91.5% accuracy in identifying general
+            arrhythmias and normal sinus rhythm. Multi-class diagnostics of conditions such as
+            myocardial infarction, bundle branch block and atrial fibrillation were being explored,
+            but finalising them was beyond the time constraints of the project.
+          </p>
         </div>
       </section>
 
-      <section className="mt-16">
-        <h2 className="font-display text-2xl text-paper">Tools &amp; technologies</h2>
-        <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
-          {project.sections.tools.map((tool) => (
-            <li
-              key={tool}
-              className="font-mono-label text-[11px] text-paper-dim/80 border border-ink-line rounded-sm px-2 py-1"
-            >
-              {tool}
-            </li>
-          ))}
-        </ul>
-        {!project.githubHref.startsWith("[") ? (
-          <a
-            href={project.githubHref}
-            className="mt-5 inline-block text-sm text-halpha hover:text-paper transition-colors"
-          >
-            View code on GitHub
-          </a>
-        ) : null}
-      </section>
+      {!project.githubHref.startsWith("[") ? (
+        <a
+          href={project.githubHref}
+          className="mt-16 inline-block text-sm text-halpha hover:text-paper transition-colors"
+        >
+          View code on GitHub
+        </a>
+      ) : null}
     </div>
   );
 }
