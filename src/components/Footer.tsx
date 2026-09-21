@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="grid gap-10 md:grid-cols-2">
         <div>
           <h2 className="font-display text-2xl text-paper text-balance">
-            Interested in research, collaboration or PhD opportunities?
+            Seeking PhD opportunities and open to research collaboration
           </h2>
           <Link
             href="/contact"

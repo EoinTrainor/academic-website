@@ -4,7 +4,7 @@ import { SITE } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch about research, collaboration or PhD opportunities.",
+  description: "Seeking PhD opportunities and open to research collaboration. Get in touch.",
 };
 
 const CHANNELS = [
@@ -18,7 +18,7 @@ export default function ContactPage() {
   return (
     <div className="mx-auto max-w-2xl px-6 pb-24 pt-14 md:px-10">
       <SectionHeader
-        heading="Interested in research, collaboration or PhD opportunities?"
+        heading="Seeking PhD opportunities and open to research collaboration"
         intro="I'm happy to hear from prospective supervisors, collaborators or anyone interested in this work."
       />
 
