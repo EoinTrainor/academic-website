@@ -137,7 +137,7 @@ export default function Page() {
         </ul>
         <p className="mt-6 max-w-2xl border-l border-ink-line pl-4 text-base leading-relaxed text-paper-dim italic">
           An undergraduate physics research project at Queen&rsquo;s University Belfast, completed
-          as part of Team 04 and titled &ldquo;ECG Classification Methods: Explorative Denoising
+          as part of a team and titled &ldquo;ECG Classification Methods: Explorative Denoising
           and Feature Detection Strategies Enhanced by Machine Learning&rdquo;. It treats the
           electrocardiogram as a noisy physical signal, and follows how better signal processing
           changed what a machine-learning classifier could achieve.

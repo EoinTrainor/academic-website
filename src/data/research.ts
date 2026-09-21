@@ -225,6 +225,7 @@ export const OTHER_RESEARCH: ResearchProject[] = [
       "Denoising",
       "Feature detection",
       "Statistical analysis",
+      "Medical physics",
     ],
     figureLabel: "ECG signal-processing and classification pipeline",
     githubHref: "[Project repository]",
