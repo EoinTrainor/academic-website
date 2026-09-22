@@ -4,7 +4,7 @@ import ScientificFigure from "./ScientificFigure";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-5xl px-6 pt-16 pb-20 md:px-10 md:pt-24 md:pb-28">
+    <section className="mx-auto max-w-5xl px-6 pt-16 pb-8 md:px-10 md:pt-24 md:pb-10">
       <div className="grid gap-12 md:grid-cols-[1.3fr_1fr] md:items-end">
         <div>
           <h1 className="font-display text-5xl md:text-7xl text-paper text-balance">

@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Hero />
 
-      <section className="mx-auto max-w-5xl px-6 py-20 md:px-10">
+      <section className="mx-auto max-w-5xl px-6 pt-4 pb-20 md:px-10">
         <SectionHeader
           heading="Current Research"
           intro="Understanding compact systems through observation, image analysis and physical modelling."
