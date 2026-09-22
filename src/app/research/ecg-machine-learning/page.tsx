@@ -223,6 +223,13 @@ export default function Page() {
               </div>
             ))}
           </dl>
+          <div className="max-w-lg">
+            <FallbackFigure
+              label="Example normal sinus rhythm ECG recording used in the binary classifier"
+              src={`${IMG}ecg-nsr-raw-example.png`}
+              caption="A normal sinus rhythm recording, resampled to a common 360 Hz sampling rate before processing."
+            />
+          </div>
         </div>
       </section>
 
@@ -239,6 +246,11 @@ export default function Page() {
             baseline variations and high-frequency contamination can occupy different regions of
             frequency space from much of the useful ECG signal.
           </p>
+          <FallbackFigure
+            label="FFT of the raw ECG compared with the FFT after applying frequency cutoffs"
+            src={`${IMG}ecg-fft-cutoff-denoising.png`}
+            caption="Frequency-domain denoising by cutoff filtering (0.5-25 Hz): the raw FFT (top) against the filtered result (bottom), suppressing content outside the band of interest."
+          />
           <FallbackFigure
             label="Comparison of normal and abnormal ECG signals in the time and frequency domains"
             src={`${IMG}ecg-fft-normal-abnormal.png`}
@@ -258,6 +270,11 @@ export default function Page() {
             peaks over-smoothed it and degraded the waveform. That limitation motivated the use of
             wavelet methods and explicit time-domain feature detection.
           </p>
+          <FallbackFigure
+            label="Original ECG signal compared with a reconstruction from only its most significant frequency peaks"
+            src={`${IMG}ecg-fft-oversmoothed-reconstruction.png`}
+            caption="Reconstructing the signal from only its most significant FFT peaks over-smooths it: the sharp QRS complexes survive, but finer time-domain structure is lost."
+          />
           <p className="text-base leading-relaxed text-paper-dim">
             Wavelets retain both scale, which is related to frequency, and localisation in time.
             The Db4 (Daubechies 4) wavelet was especially useful because its compact, oscillatory
@@ -274,20 +291,19 @@ export default function Page() {
             Conceptually, W(a, b) measures how strongly the signal resembles a wavelet of scale a
             centred at time b, so it records both which scales are present and when they occur.
           </p>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="max-w-xs">
             <FallbackFigure
               label="Daubechies 4 wavelet used during ECG signal analysis"
               src={`${IMG}ecg-db4-wavelet.png`}
               caption="The Daubechies 4 (Db4) wavelet, whose compact oscillatory shape suits sharp ECG structures."
               aspect="square"
             />
-            <FallbackFigure
-              label="Wavelet scalogram showing the time-frequency structure of an ECG signal"
-              src={`${IMG}ecg-wavelet-scalogram.png`}
-              caption="A wavelet scalogram showing how the frequency content of an ECG signal varies with time."
-              aspect="square"
-            />
           </div>
+          <FallbackFigure
+            label="Wavelet scalogram of the original ECG compared with the denoised ECG"
+            src={`${IMG}ecg-wavelet-scalogram.png`}
+            caption="Wavelet scalograms of the original (top) and denoised (bottom) ECG, showing how the signal's time-frequency structure changes after denoising."
+          />
         </div>
       </section>
 
@@ -322,6 +338,20 @@ export default function Page() {
             src={`${IMG}ecg-power-spectral-density.png`}
             caption="Power spectral density of an ECG signal, used to identify dominant frequency components."
           />
+          <div className="grid gap-6 sm:grid-cols-2">
+            <FallbackFigure
+              label="Distribution of R-peak voltages across eight normal sinus rhythm recordings"
+              src={`${IMG}ecg-rpeak-voltage-all.png`}
+              caption="R-peak voltage distributions for individual NSR recordings, with Gaussian and Gaussian-mixture fits."
+              aspect="square"
+            />
+            <FallbackFigure
+              label="Distribution of R-peak voltages restricted to a male subcategory of recordings"
+              src={`${IMG}ecg-rpeak-voltage-male.png`}
+              caption="The same analysis restricted to a male subcategory of five recordings: subgroup structure narrows and shifts the pooled distribution."
+              aspect="square"
+            />
+          </div>
         </div>
       </section>
 
@@ -398,9 +428,9 @@ export default function Page() {
             above.
           </p>
           <FallbackFigure
-            label="Multi-class ECG classification workflow or performance visualisation"
+            label="PQRST feature detection applied to an arrhythmic ECG recording"
             src={`${IMG}ecg-multiclass-classification.png`}
-            caption="Multi-class extension: normal sinus rhythm, myocardial infarction, bundle branch block and atrial fibrillation."
+            caption="The same PQRST detection pipeline applied to an arrhythmic recording, the beat-level detail the multi-class extension builds on."
           />
         </div>
       </section>
