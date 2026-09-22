@@ -137,9 +137,9 @@ export default function Page() {
             light curve.
           </p>
           <ScientificFigure
-            label="Wavelength-dependent orbital modulation model"
-            video="/media/psrb1957-model.mp4"
-            caption="Model animation: the companion's irradiated day side rotating into view across orbital phase, and the resulting flux traced in three simulated bands."
+            label="Reference, science and difference images around PSR B1957+20"
+            src="/figures/psrb1957-diffimaging-panels.png"
+            caption="Reference and science frames around the companion, with the resulting difference image and the empirical PSFs used for each frame."
           />
         </div>
       </section>
@@ -211,9 +211,9 @@ export default function Page() {
             approach used for GX 339−4.
           </p>
           <ScientificFigure
-            label="Reference, science and difference images around PSR B1957+20"
-            src="/figures/psrb1957-diffimaging-panels.png"
-            caption="Reference and science frames around the companion, with the resulting difference image and the empirical PSFs used for each frame."
+            label="Wavelength-dependent orbital modulation model"
+            video="/media/psrb1957-model.mp4"
+            caption="Model animation: the companion's irradiated day side rotating into view across orbital phase, and the resulting flux traced in three simulated bands."
           />
         </div>
       </section>
