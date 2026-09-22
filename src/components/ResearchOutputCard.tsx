@@ -1,18 +1,28 @@
 import Link from "next/link";
 import type { Output } from "@/data/outputs";
+import ScientificFigure from "./ScientificFigure";
 
 export default function ResearchOutputCard({ output }: { output: Output }) {
   const content = (
-    <>
-      <p className="font-mono-label text-[11px] text-paper-dim/70">
-        {output.kind} · {output.year}
-      </p>
-      <h3 className="mt-1.5 font-display text-lg text-paper group-hover:text-halpha transition-colors">
-        {output.title}
-      </h3>
-      <p className="mt-1 text-sm text-steel">{output.venue}</p>
-      <p className="mt-2 text-sm leading-relaxed text-paper-dim">{output.note}</p>
-    </>
+    <div className="flex gap-6">
+      <div className="flex-1">
+        <p className="font-mono-label text-[11px] text-paper-dim/70">
+          {output.kind} · {output.year}
+        </p>
+        <h3 className="mt-1.5 font-display text-lg text-paper group-hover:text-halpha transition-colors">
+          {output.title}
+        </h3>
+        <p className="mt-1 text-sm text-steel">{output.venue}</p>
+        <p className="mt-2 text-sm leading-relaxed text-paper-dim">{output.note}</p>
+      </div>
+      <div className="w-28 shrink-0 sm:w-36">
+        <ScientificFigure
+          label={output.imageLabel ?? "[Image]"}
+          src={output.imageSrc}
+          aspect="square"
+        />
+      </div>
+    </div>
   );
 
   if (output.href) {
