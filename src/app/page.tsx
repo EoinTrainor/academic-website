@@ -49,6 +49,7 @@ export default function Home() {
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <ScientificFigure
             label={featured.figureLabel}
+            src={featured.figureSrc}
             meta="Difference imaging"
             aspect="tall"
             accent
