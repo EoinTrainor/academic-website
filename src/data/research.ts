@@ -189,7 +189,7 @@ export const OTHER_RESEARCH: ResearchProject[] = [
     title: "Solar H-alpha Observations",
     subtitle: "Structure and dynamics in the solar chromosphere",
     summary:
-      "Used narrow-band H-alpha observations to investigate structure and dynamics in the solar chromosphere, developing experience in observational astronomy, image analysis and interpretation of astrophysical data.",
+      "Used narrow-band Hα observations to investigate the structure and dynamics of the solar chromosphere, combining hands-on observing with quantitative CCD characterisation and photometric calibration. I measured detector gain, readout noise and dark current, constructed bias, dark and flat-field calibrations, and converted the CCD's recorded ADU counts into physical Hα flux measurements. The observations captured an eruptive solar prominence, whose motion was tracked across successive frames to derive its plasma velocity and acceleration; under a magnetic-tension model, these measurements were then used to place a constraint on the prominence's magnetic field strength.",
     tags: ["Python", "Solar physics", "Image analysis", "Observational astronomy"],
     figureLabel: "[Narrow-band H-alpha solar image]",
     githubHref: "[Project repository]",

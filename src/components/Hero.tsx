@@ -10,7 +10,7 @@ export default function Hero() {
           <h1 className="font-display text-5xl md:text-7xl text-paper text-balance">
             {SITE.name}
           </h1>
-          <p className="mt-4 font-mono-label text-xs text-halpha">ASTROPHYSICS...</p>
+          <p className="mt-4 font-mono-label text-xs text-halpha">ASTROPHYSICS</p>
           <p className="mt-2 text-lg text-steel">{SITE.role}</p>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-paper">
             Research Master&rsquo;s student in astrophysics at University College Cork, working on
