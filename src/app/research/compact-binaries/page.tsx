@@ -322,27 +322,14 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mt-16">
-        <h2 className="font-display text-2xl text-paper">Tools &amp; technologies</h2>
-        <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
-          {project.sections.tools.map((tool) => (
-            <li
-              key={tool}
-              className="font-mono-label text-[11px] text-paper-dim/80 border border-ink-line rounded-sm px-2 py-1"
-            >
-              {tool}
-            </li>
-          ))}
-        </ul>
-        {!project.githubHref.startsWith("[") ? (
-          <a
-            href={project.githubHref}
-            className="mt-5 inline-block text-sm text-halpha hover:text-paper transition-colors"
-          >
-            View code on GitHub
-          </a>
-        ) : null}
-      </section>
+      {!project.githubHref.startsWith("[") ? (
+        <a
+          href={project.githubHref}
+          className="mt-16 inline-block text-sm text-halpha hover:text-paper transition-colors"
+        >
+          View code on GitHub
+        </a>
+      ) : null}
     </div>
   );
 }

@@ -97,8 +97,8 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
     tags: [],
     abstract:
       "We observed GX 339−4 using near-infrared (NIR) Ks-band photometry over the 2025 Spring/Summer observing campaign, taken with the HAWK-I instrument on the European Southern Observatory (ESO)'s Very Large Telescope (VLT).",
-    figureLabel: "PSF-matched difference imaging sequence — GX 339−4",
-    figureSrc: "/figures/gx339-diffimaging-panels.png",
+    figureLabel: "Quiescent versus elevated near-infrared epoch — GX 339−4",
+    figureSrc: "/figures/gx339-quiescent-vs-elevated.png",
     githubHref: "https://github.com/EoinTrainor/gx339-4-lightcurve",
     status: "Active",
     sections: {
