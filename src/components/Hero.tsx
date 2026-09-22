@@ -41,7 +41,11 @@ export default function Hero() {
         </div>
 
         <div className="hidden border-l border-ink-line pl-8 md:block">
-          <ScientificFigure label="[Profile photograph]" aspect="square" />
+          <ScientificFigure
+            label="Profile photograph"
+            src="/figures/eoin-trainor-profile.png"
+            aspect="square"
+          />
         </div>
       </div>
     </section>
