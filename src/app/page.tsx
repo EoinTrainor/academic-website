@@ -78,6 +78,15 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-20 md:px-10">
+        <SectionHeader heading="Research Outputs & Recognition" />
+        <div className="mt-10 grid gap-8 sm:grid-cols-2">
+          {OUTPUTS.map((output) => (
+            <ResearchOutputCard key={output.title} output={output} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-20 md:px-10">
         <SectionHeader
           heading="Methods & Research Interests"
           intro="A quantitative toolkit built around observation, computation and inference, applied to astrophysics and transferable beyond it."
@@ -93,15 +102,6 @@ export default function Home() {
           <div className="mt-6">
             <MethodsGrid items={RESEARCH_INTERESTS} />
           </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-5xl px-6 py-20 md:px-10">
-        <SectionHeader heading="Research Outputs & Recognition" />
-        <div className="mt-10 grid gap-8 sm:grid-cols-2">
-          {OUTPUTS.map((output) => (
-            <ResearchOutputCard key={output.title} output={output} />
-          ))}
         </div>
       </section>
 
