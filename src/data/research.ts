@@ -15,6 +15,7 @@ export type ResearchProject = {
   figureLabel: string;
   figureSrc?: string;
   githubHref: string;
+  posterHref?: string;
   status: "Active" | "Ongoing" | "Completed";
   sections: {
     motivation: string;
@@ -186,30 +187,43 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
 export const OTHER_RESEARCH: ResearchProject[] = [
   {
     slug: "solar-ha",
-    title: "Solar H-alpha Observations",
-    subtitle: "Structure and dynamics in the solar chromosphere",
+    title: "Observing the Solar Chromosphere",
+    subtitle: "Hα imaging, CCD characterisation and plasma dynamics in the solar atmosphere",
     summary:
       "Used narrow-band Hα observations to investigate the structure and dynamics of the solar chromosphere, combining hands-on observing with quantitative CCD characterisation and photometric calibration. I measured detector gain, readout noise and dark current, constructed bias, dark and flat-field calibrations, and converted the CCD's recorded ADU counts into physical Hα flux measurements. The observations captured an eruptive solar prominence, whose motion was tracked across successive frames to derive its plasma velocity and acceleration; under a magnetic-tension model, these measurements were then used to place a constraint on the prominence's magnetic field strength.",
-    tags: ["Python", "Solar physics", "Image analysis", "Observational astronomy"],
-    figureLabel: "[Narrow-band H-alpha solar image]",
+    tags: ["Solar physics", "CCD photometry", "Hα imaging", "Observational astronomy"],
+    figureLabel: "[Full-disc Hα image of the solar chromosphere]",
     githubHref: "[Project repository]",
+    posterHref: "[Poster PDF]",
     status: "Completed",
     sections: {
       motivation:
-        "The H-alpha line, at 656.28 nm, is one of the most direct windows onto the solar chromosphere, the layer between the visible photosphere and the outer corona, where structures such as filaments and fibrils form and evolve on short timescales.",
+        "The solar chromosphere is a thin and highly dynamic region of the Sun's atmosphere, shaped strongly by magnetic fields and containing structures such as sunspots, filaments and prominences. Hα, produced by transitions in neutral hydrogen, is one of the most useful wavelengths for isolating this structure against the underlying photosphere.",
       question:
-        "What can narrow-band H-alpha imaging reveal about structure and dynamics in the solar chromosphere?",
-      data: "Narrow-band H-alpha solar imaging, [observation dates and instrument to be added].",
+        "Can narrow-band Hα imaging, combined with detector characterisation and photometric calibration, be used to measure the physical motion of an eruptive solar prominence and place a constraint on the magnetic field driving it?",
+      data: "Observations were made using dedicated 60 mm Hα solar telescopes coupled to an ATIK 314L+ CCD camera, with Fabry-Perot etalons and blocking filters isolating a narrow band around 656.3 nm.",
       methods: [
-        "Narrow-band H-alpha image acquisition",
-        "Image calibration and processing",
-        "Feature identification and interpretation",
+        "CCD gain, readout noise and dark current characterisation",
+        "Bias, dark and flat-field calibration",
+        "Conversion of calibrated ADU counts to physical Hα flux",
+        "Prominence displacement tracking across successive frames",
+        "Velocity and acceleration estimation from image-scale-calibrated motion",
+        "Magnetic-tension modelling of the eruption",
       ],
       contribution:
-        "This was an undergraduate research project under Dr Peter Keys at Queen's University Belfast, written up as a fifteen-page paper.",
+        "An individual undergraduate research project at Queen's University Belfast, covering telescope operation, CCD characterisation, calibration-frame construction, image processing, photometry and time-series analysis, written up as a full project report and presented as a poster.",
       status: "Completed as an undergraduate research project at Queen's University Belfast.",
-      figures: [{ label: "[H-alpha chromosphere image]" }],
-      tools: ["Python", "Image processing tools"],
+      figures: [],
+      tools: [
+        "Python",
+        "NumPy",
+        "Matplotlib",
+        "FITS image processing",
+        "CCD photometry",
+        "Hα imaging",
+        "Time-series analysis",
+        "Plasma modelling",
+      ],
     },
   },
   {
@@ -228,6 +242,7 @@ export const OTHER_RESEARCH: ResearchProject[] = [
       "Medical physics",
     ],
     figureLabel: "ECG signal-processing and classification pipeline",
+    figureSrc: "/assets/images/research/ecg/ecg-card-figure.png",
     githubHref: "[Project repository]",
     status: "Completed",
     sections: {
