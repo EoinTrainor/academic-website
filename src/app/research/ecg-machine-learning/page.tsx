@@ -251,11 +251,6 @@ export default function Page() {
             src={`${IMG}ecg-fft-cutoff-denoising.png`}
             caption="Frequency-domain denoising by cutoff filtering (0.5-25 Hz): the raw FFT (top) against the filtered result (bottom), suppressing content outside the band of interest."
           />
-          <FallbackFigure
-            label="Comparison of normal and abnormal ECG signals in the time and frequency domains"
-            src={`${IMG}ecg-fft-normal-abnormal.png`}
-            caption="Normal and abnormal ECG signals compared in the time domain and in the frequency domain."
-          />
           <p className="text-base leading-relaxed text-paper-dim">
             However, the analysis ran into a central limitation.
           </p>
@@ -267,14 +262,10 @@ export default function Page() {
             This matters for ECGs, because the P wave, QRS complex and T wave are transient
             structures whose relative timings and shapes contain important information. In
             practice, attempts to reconstruct the signal from only its most significant frequency
-            peaks over-smoothed it and degraded the waveform. That limitation motivated the use of
-            wavelet methods and explicit time-domain feature detection.
+            peaks over-smoothed it and degraded the waveform (see the explorative PSD sigma-clipping
+            technique under Methods below). That limitation motivated the use of wavelet methods and
+            explicit time-domain feature detection.
           </p>
-          <FallbackFigure
-            label="Original ECG signal compared with a reconstruction from only its most significant frequency peaks"
-            src={`${IMG}ecg-fft-oversmoothed-reconstruction.png`}
-            caption="Reconstructing the signal from only its most significant FFT peaks over-smooths it: the sharp QRS complexes survive, but finer time-domain structure is lost."
-          />
           <p className="text-base leading-relaxed text-paper-dim">
             Wavelets retain both scale, which is related to frequency, and localisation in time.
             The Db4 (Daubechies 4) wavelet was especially useful because its compact, oscillatory
@@ -333,11 +324,25 @@ export default function Page() {
             src={`${IMG}ecg-feature-detection.png`}
             caption="Automatically detected P, Q, R, S and T features, from which intervals and heart rate are derived."
           />
-          <FallbackFigure
-            label="Power spectral density analysis of an ECG signal"
-            src={`${IMG}ecg-power-spectral-density.png`}
-            caption="Power spectral density of an ECG signal, used to identify dominant frequency components."
-          />
+          <p className="text-base leading-relaxed text-paper-dim">
+            One explorative technique identified power spectral density peaks exceeding a two
+            standard deviation threshold and used only those peaks to reconstruct the signal. This
+            sigma-clipping-in-PSD-space approach proved poorly suited to ECGs: it over-smoothed the
+            signal and could not reconstruct finer features such as the QRS complex, which is why
+            wavelet-based and standard Fourier-cutoff denoising were used instead.
+          </p>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <FallbackFigure
+              label="Original ECG signal compared with a reconstruction from only its most significant PSD peaks"
+              src={`${IMG}ecg-fft-oversmoothed-reconstruction.png`}
+              caption="Reconstructing the signal from only its most significant PSD peaks over-smooths it, losing finer structure such as the QRS complex."
+            />
+            <FallbackFigure
+              label="Power spectral density with peaks exceeding a two standard deviation threshold"
+              src={`${IMG}ecg-power-spectral-density.png`}
+              caption="The PSD peaks (greater than 2σ) used to drive that reconstruction."
+            />
+          </div>
           <div className="grid gap-6 sm:grid-cols-2">
             <FallbackFigure
               label="Distribution of R-peak voltages across eight normal sinus rhythm recordings"
