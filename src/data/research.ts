@@ -14,6 +14,7 @@ export type ResearchProject = {
   abstract?: string;
   figureLabel: string;
   figureSrc?: string;
+  figureVideo?: string;
   githubHref: string;
   posterHref?: string;
   status: "Active" | "Ongoing" | "Completed";
@@ -44,6 +45,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
     tags: [],
     figureLabel: "HiPERCAM multi-band difference-imaging sequence",
     figureSrc: "/figures/psrb1957-diffimaging-panels.png",
+    figureVideo: "/media/psrb1957-model.mp4",
     githubHref: "[Project repository]",
     status: "Active",
     sections: {
