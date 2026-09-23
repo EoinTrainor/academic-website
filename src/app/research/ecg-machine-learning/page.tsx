@@ -474,6 +474,13 @@ export default function Page() {
             myocardial infarction, bundle branch block and atrial fibrillation were being explored,
             but finalising them was beyond the time constraints of the project.
           </p>
+          <p className="text-base leading-relaxed text-paper-dim">
+            Looking beyond the project itself, this line of work seems well suited to further
+            growth toward real-time diagnostic assistance in medical monitoring devices,
+            particularly by extending the feature-detection pipeline to identify structure across
+            several signal representations at once, and by learning directly from the large
+            volumes of otherwise under-used clinical ECG data.
+          </p>
         </div>
       </section>
 
