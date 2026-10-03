@@ -5,12 +5,30 @@ import ScientificFigure from "./ScientificFigure";
 export default function ResearchCard({ project }: { project: ResearchProject }) {
   return (
     <article className="grid gap-6 border-t border-ink-line pt-8 md:grid-cols-2 md:gap-10">
-      <ScientificFigure
-        label={project.figureLabel}
-        src={project.figureSrc}
-        video={project.figureVideo}
-        meta={project.status}
-      />
+      <div>
+        <ScientificFigure
+          label={project.figureLabel}
+          src={project.figureSrc}
+          video={project.figureVideo}
+          meta={project.status}
+        />
+        {project.figureVideo && project.figureCreditName ? (
+          <p className="mt-2 text-xs text-paper-dim/80 leading-relaxed">
+            Visual modelled by{" "}
+            {project.figureCreditHref ? (
+              <a
+                href={project.figureCreditHref}
+                className="text-halpha hover:text-paper transition-colors"
+              >
+                {project.figureCreditName}
+              </a>
+            ) : (
+              project.figureCreditName
+            )}{" "}
+            using ICARUS software.
+          </p>
+        ) : null}
+      </div>
       <div className="flex flex-col">
         <h3 className="font-display text-2xl text-paper">{project.title}</h3>
         <p className="mt-1 text-sm text-steel">{project.subtitle}</p>

@@ -15,6 +15,8 @@ export type ResearchProject = {
   figureLabel: string;
   figureSrc?: string;
   figureVideo?: string;
+  figureCreditName?: string;
+  figureCreditHref?: string;
   githubHref: string;
   posterHref?: string;
   status: "Active" | "Ongoing" | "Completed";
@@ -46,6 +48,8 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
     figureLabel: "HiPERCAM multi-band difference-imaging sequence",
     figureSrc: "/figures/psrb1957-diffimaging-panels.png",
     figureVideo: "/media/psrb1957-model.mp4",
+    figureCreditName: "Dr Mark Kennedy, UCC Astrophysics",
+    figureCreditHref: "https://www.ucc.ie/en/astro/compactbinariesandtheneutronstarblackholemassgap/",
     githubHref: "[Project repository]",
     status: "Active",
     sections: {
