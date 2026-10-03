@@ -215,6 +215,16 @@ export default function Page() {
             video="/media/psrb1957-model.mp4"
             caption="Model animation: the companion's irradiated day side rotating into view across orbital phase, and the resulting flux traced in three simulated bands."
           />
+          <p className="text-xs text-paper-dim/80 leading-relaxed">
+            Project supervised by{" "}
+            <a
+              href="https://www.ucc.ie/en/astro/compactbinariesandtheneutronstarblackholemassgap/"
+              className="text-halpha hover:text-paper transition-colors"
+            >
+              Dr Mark Kennedy, UCC Astrophysics
+            </a>
+            .
+          </p>
         </div>
       </section>
 
