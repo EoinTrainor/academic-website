@@ -5,6 +5,7 @@ export type Repo = {
   href: string;
   status: "Active" | "Completed";
   figureLabel: string;
+  pipeline: string[];
 };
 
 export const REPOS: Repo[] = [
@@ -16,6 +17,7 @@ export const REPOS: Repo[] = [
     href: "[Project repository]",
     status: "Active",
     figureLabel: "[Repository figure]",
+    pipeline: ["Raw frames", "Empirical PSF", "PSF matching", "Subtraction", "Light curve"],
   },
   {
     name: "Compact Binary Modelling",
@@ -25,6 +27,7 @@ export const REPOS: Repo[] = [
     href: "[Project repository]",
     status: "Active",
     figureLabel: "[Repository figure]",
+    pipeline: ["Binary parameters", "ICARUS model", "Likelihood", "MCMC", "Posterior"],
   },
   {
     name: "ECG Machine Learning",
@@ -34,6 +37,7 @@ export const REPOS: Repo[] = [
     href: "[Project repository]",
     status: "Completed",
     figureLabel: "[Repository figure]",
+    pipeline: ["Raw ECG", "Denoising", "PQRST detection", "Features", "Classification"],
   },
   {
     name: "Solar H-alpha Analysis",
@@ -42,5 +46,6 @@ export const REPOS: Repo[] = [
     href: "[Project repository]",
     status: "Completed",
     figureLabel: "[Repository figure]",
+    pipeline: ["Raw frames", "CCD calibration", "Physical flux", "Motion tracking", "Field estimate"],
   },
 ];
