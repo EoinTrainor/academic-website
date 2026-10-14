@@ -15,7 +15,11 @@ export default function AboutPage() {
       <SectionHeader heading="About" />
 
       <div className="mt-10 grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-start">
-        <ScientificFigure label="[Academic profile photograph]" aspect="square" />
+        <ScientificFigure
+          label="Profile photograph"
+          src="/figures/eoin-trainor-profile.png"
+          aspect="square"
+        />
         <div className="space-y-4 text-base leading-relaxed text-paper-dim">
           <p>
             I&rsquo;m Eoin Trainor, a physics graduate from Queen&rsquo;s University Belfast and
@@ -59,6 +63,20 @@ export default function AboutPage() {
         <h2 className="font-display text-2xl text-paper">Timeline</h2>
         <div className="mt-8">
           <ResearchTimeline entries={ACADEMIC_TIMELINE} />
+        </div>
+      </div>
+
+      <div className="mt-20">
+        <h2 className="font-display text-2xl text-paper">Beyond physics</h2>
+        <div className="mt-4 max-w-2xl space-y-4 text-base leading-relaxed text-paper-dim">
+          <p>
+            Outside of physics, I play county-level hurling and follow hurling and sport generally.
+            I enjoy skiing, being outdoors, travelling and experiencing different cultures.
+          </p>
+          <p>
+            I&rsquo;m a trained lifeguard, a licensed forklift and JCB 17m tele-handler operator,
+            and a powerboat licence holder, and I&rsquo;ve also flown a plane.
+          </p>
         </div>
       </div>
     </div>
