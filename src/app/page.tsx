@@ -67,12 +67,20 @@ export default function Home() {
               difference-imaging pipeline to recover faint orbital signals that direct photometry
               would otherwise miss.
             </p>
-            <Link
-              href={`/research/${featured.slug}`}
-              className="mt-6 inline-block text-sm text-halpha hover:text-paper transition-colors"
-            >
-              Read the research →
-            </Link>
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
+              <Link
+                href={`/research/${featured.slug}`}
+                className="inline-block text-sm text-halpha hover:text-paper transition-colors"
+              >
+                Read the research →
+              </Link>
+              <a
+                href={!featured.githubHref.startsWith("[") ? featured.githubHref : SITE.github}
+                className="text-sm text-paper-dim hover:text-paper transition-colors"
+              >
+                View code on GitHub
+              </a>
+            </div>
           </div>
         </div>
       </section>

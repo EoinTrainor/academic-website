@@ -56,14 +56,6 @@ export default function ResearchCard({ project }: { project: ResearchProject }) 
           >
             Read project →
           </Link>
-          {!project.githubHref.startsWith("[") ? (
-            <a
-              href={project.githubHref}
-              className="text-sm text-paper-dim hover:text-paper transition-colors"
-            >
-              View code on GitHub
-            </a>
-          ) : null}
         </div>
       </div>
     </article>
