@@ -79,7 +79,7 @@ export default function Page() {
       <div className="mt-10">
         <FallbackFigure
           label="Full-disc Hα image of the solar chromosphere"
-          src={`${IMG}solar-ha-overview.png`}
+          src={`${IMG}solar-ha-overview.jpeg`}
           caption="The solar chromosphere observed in the Hα line at 656.3 nm, revealing structures including prominences, filaments and sunspots."
           aspect="wide"
         />

@@ -198,7 +198,8 @@ export const OTHER_RESEARCH: ResearchProject[] = [
     summary:
       "Used narrow-band Hα observations to investigate the structure and dynamics of the solar chromosphere, combining hands-on observing with quantitative CCD characterisation and photometric calibration. I measured detector gain, readout noise and dark current, constructed bias, dark and flat-field calibrations, and converted the CCD's recorded ADU counts into physical Hα flux measurements. The observations captured an eruptive solar prominence, whose motion was tracked across successive frames to derive its plasma velocity and acceleration; under a magnetic-tension model, these measurements were then used to place a constraint on the prominence's magnetic field strength.",
     tags: ["Solar physics", "CCD photometry", "Hα imaging", "Observational astronomy"],
-    figureLabel: "[Full-disc Hα image of the solar chromosphere]",
+    figureLabel: "Full-disc Hα image of the solar chromosphere",
+    figureSrc: "/figures/solar-ha-full-disc.jpeg",
     githubHref: "[Project repository]",
     posterHref: "[Poster PDF]",
     status: "Completed",
