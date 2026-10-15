@@ -43,7 +43,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
     title: "PSR B1957+20",
     subtitle: "Multi-band photometry and difference imaging of the original black-widow pulsar",
     summary:
-      "Applying a PSF-matched difference-imaging pipeline to the black-widow pulsar PSR B1957+20, using simultaneous five-band HiPERCAM photometry to trace the irradiated companion's temperature and orbital modulation.",
+      "Applying a PSF-matched difference-imaging pipeline to the black-widow pulsar PSR B1957+20, using simultaneous five-band HiPERCAM photometry to trace the irradiated companion's temperature and orbital modulation. The g_s, r_s and i_s bands are now flux-calibrated and matched against a fiducial ICARUS Roche-lobe model, with a joint MCMC fit underway to constrain the orbital inclination and neutron star mass.",
     tags: [],
     figureLabel: "HiPERCAM multi-band difference-imaging sequence",
     figureSrc: "/figures/psrb1957-diffimaging-panels.png",
@@ -73,7 +73,7 @@ export const CURRENT_RESEARCH: ResearchProject[] = [
       contribution:
         "I am building the full multi-band pipeline, from raw HiPERCAM frames through PSF modelling, per-band difference imaging and photometric extraction, to the phase-folded orbital light curves, and validating the recovered variability against a permutation-test null.",
       status:
-        "Coherent orbital variability has been recovered in the u_s and r_s bands, with a permutation test against the null of no variability giving p ≈ 0.007 and consistent night-to-night behaviour. Photometric calibration and a total-flux (rather than reference-anchored differential) light curve are still in progress, as is characterising the wavelength dependence across all five bands. Day/night temperature contrast, the heating-distribution model, orbital inclination and companion mass have not yet been constrained.",
+        "Coherent, photometrically calibrated orbital variability has been recovered in the g_s, r_s and i_s bands, with a permutation test against the null of no variability giving p ≈ 0.007 and consistent night-to-night behaviour. A fiducial ICARUS Roche-lobe model (i = 65°, f = 0.85, T_base ≈ 2,900 K, T_irr ≈ 8,000 K) already matches the calibrated light curve well. Extending calibration to the u_s and z_s bands, and running the joint MCMC fit needed for a formal inclination and neutron-star-mass constraint, are still in progress.",
       figures: [
         {
           label: "Wavelength-dependent orbital modulation model",

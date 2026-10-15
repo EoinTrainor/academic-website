@@ -326,10 +326,12 @@ export default function Page() {
             <div className="mt-3">
               <Bullets
                 items={[
-                  "Coherent orbital variability has been recovered in the u_s and r_s bands.",
-                  "The modulation is broadly consistent with the expected irradiation-driven behaviour of the companion.",
+                  "Coherent orbital variability has been recovered in the g_s, r_s and i_s bands.",
+                  "The reference contribution has been added back and the light curves photometrically calibrated to physical flux units (μJy).",
+                  "The modulation is consistent with the expected irradiation-driven behaviour of the companion.",
                   "There is encouraging consistency between observations obtained on different nights.",
                   "Statistical testing has been used to assess whether the variability is genuinely associated with orbital phase.",
+                  "A fiducial ICARUS Roche-lobe model already reproduces the calibrated light-curve shape reasonably well.",
                 ]}
               />
             </div>
@@ -339,10 +341,8 @@ export default function Page() {
             <div className="mt-3">
               <Bullets
                 items={[
-                  "Recovering the contribution from the reference images.",
-                  "Converting differential flux into a total flux light curve.",
-                  "Photometric calibration.",
-                  "Establishing the wavelength dependence consistently across all five bands.",
+                  "Extending calibration and modelling to the u_s and z_s bands.",
+                  "Joint MCMC sampling over inclination, fillout factor and the day/night temperatures, rather than one-parameter-at-a-time sensitivity checks.",
                   "Final consistency and validation checks.",
                 ]}
               />
@@ -353,19 +353,16 @@ export default function Page() {
             <div className="mt-3">
               <Bullets
                 items={[
-                  "Day-side temperature.",
-                  "Night-side temperature.",
-                  "Heating distribution.",
-                  "Companion geometry.",
-                  "Orbital inclination.",
+                  "Orbital inclination, with a formal posterior uncertainty.",
                   "Neutron star mass.",
                 ]}
               />
             </div>
           </div>
           <Highlight>
-            The variable orbital light curve has been recovered, but the reduction required for
-            physical modelling is still ongoing.
+            A calibrated, physical light curve has been recovered and a fiducial ICARUS model
+            already matches it well. The joint MCMC fit needed to turn that into a formal
+            inclination and mass constraint is still running.
           </Highlight>
         </div>
       </section>
@@ -402,14 +399,87 @@ export default function Page() {
         <div className="mt-4 space-y-5">
           <p className="text-base leading-relaxed text-paper-dim">
             Difference imaging measures the change in flux relative to a reference image. To
-            obtain the full physical light curve, the reference contribution has to be added back
-            to the differential measurements.
+            obtain the full physical light curve, the reference contribution was added back to
+            the differential measurements and the result photometrically calibrated, so the
+            observations are expressed in physical flux units (μJy) rather than raw detector
+            counts.
           </p>
           <p className="text-base leading-relaxed text-paper-dim">
-            The resulting total flux then needs to be photometrically calibrated, so that the
-            observations are expressed in physical or standard photometric units rather than raw
-            detector counts. This step is required before the multi-band curves can be
-            meaningfully compared with physical binary models.
+            This is the result for the g_s, r_s and i_s bands: a clear, repeatable once-per-orbit
+            modulation, consistent night to night, now on a physical flux scale that can be
+            compared directly with a binary model.
+          </p>
+          <ScientificFigure
+            label="Phase-folded, flux-calibrated PSR B1957+20 light curves in g_s, r_s and i_s"
+            src="/figures/psrb1957-icarus-lightcurves.png"
+            caption="Top: calibrated light curves (points, coloured by night) with a fiducial ICARUS model overlaid (black). Bottom: zoomed on the faint minimum, with the previous 95% upper limit shown for comparison — the new pipeline resolves structure well below that limit."
+          />
+          <Highlight>
+            The companion is now detected and resolved in physical flux units well below the
+            previous upper limit, across three simultaneous bands.
+          </Highlight>
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="font-display text-2xl text-paper">The ICARUS Binary Model</h2>
+        <div className="mt-4 space-y-5">
+          <p className="text-base leading-relaxed text-paper-dim">
+            The calibrated light curve is compared against ICARUS, a Roche-lobe binary
+            light-curve code that computes the observed flux from a companion star distorted and
+            irradiated within its host&rsquo;s gravitational field. The companion is treated as
+            filling a fraction f of its Roche lobe, with the pulsar&rsquo;s intense irradiation
+            imposing a strong day-night temperature contrast across its surface.
+          </p>
+          <ScientificFigure
+            label="PSR B1957+20 binary geometry: orbital plane, companion cross-section and day/night temperature"
+            src="/figures/psrb1957-roche-lobe-geometry.png"
+            caption="Left: the orbital plane (mass ratio q = 69.3), showing the companion sitting just inside its Roche lobe (red) relative to the inner Lagrange point L1. Centre: the companion's equatorial cross-section for different fillout factors f. Right: the resulting day-side (irradiated) to night-side temperature contrast across the surface."
+          />
+          <p className="text-base leading-relaxed text-paper-dim">
+            The fiducial model below adopts a fillout factor f = 0.85, a base (night-side)
+            temperature of roughly 2,900 K, and an irradiation (day-side) temperature of roughly
+            8,000 K, with a mass ratio q = 69.3 and orbital separation a ≈ 2.98 R☉. The ICARUS
+            surface already traces the Roche-lobe shape closely at this fillout factor.
+          </p>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <ScientificFigure
+              label="ICARUS companion surface fitted to the Roche lobe"
+              src="/figures/psrb1957-icarus-roche-fit.png"
+              caption="The ICARUS surface (black points) against the Roche lobe (red) at f = 0.85."
+              aspect="square"
+            />
+            <ScientificFigure
+              label="Companion surface gravity across the fitted shape"
+              src="/figures/psrb1957-companion-surface.png"
+              caption="Surface gravity (log g) across the tidally distorted companion, f = 0.85."
+              aspect="square"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="font-display text-2xl text-paper">Exploring the Parameter Space</h2>
+        <div className="mt-4 space-y-5">
+          <p className="text-base leading-relaxed text-paper-dim">
+            Four parameters shape the predicted light curve: inclination i, fillout factor f, and
+            the base and irradiation temperatures. Varying each individually around the fiducial
+            model, with the others held fixed, shows how distinct their effects are: inclination
+            and irradiation temperature mainly set the amplitude of the modulation, while fillout
+            factor and base temperature have a more subtle effect on its shape.
+          </p>
+          <ScientificFigure
+            label="Sensitivity of the predicted light curve to inclination, fillout factor and temperature"
+            src="/figures/psrb1957-mcmc-sensitivity.png"
+            caption="One parameter varied at a time around the fiducial model (i = 65°, f = 0.85, T_base = 2,900 K, T_irr = 8,000 K), against the calibrated data (grey)."
+          />
+          <p className="text-base leading-relaxed text-paper-dim">
+            Because several parameters affect the light curve simultaneously, constraining them
+            individually is not enough — a joint Markov Chain Monte Carlo (MCMC) fit is needed to
+            explore how they trade off against one another and to obtain a proper posterior
+            uncertainty on the inclination, rather than a single best-guess value. That joint fit
+            is currently running.
           </p>
         </div>
       </section>
@@ -418,15 +488,16 @@ export default function Page() {
         <h2 className="font-display text-2xl text-paper">From Light Curve to Neutron Star</h2>
         <div className="mt-4 space-y-5">
           <p className="text-base leading-relaxed text-paper-dim">
-            Once calibrated multi-band light curves have been recovered, computational binary
-            models can be compared with the observations. The light curve morphology and its
-            dependence on wavelength contain information about how hot the irradiated hemisphere
-            becomes, how cool the opposite side remains, how heating is distributed across the
-            surface, the shape and geometry of the companion, and the inclination of the binary.
+            The geometry and temperatures above are fiducial values, fixed to get a reasonable
+            match to the data. The step that actually matters for the neutron star is the
+            inclination, because it directly sets the dynamical mass inferred from the system
+            once the MCMC fit has converged.
           </p>
           <p className="text-base leading-relaxed text-paper-dim">
-            Inclination is particularly important, because it directly affects the dynamical mass
-            inferred for the neutron star.
+            That is the same sensitivity discussed earlier: moving between the van Kerkwijk et
+            al. (2011) and Clark et al. (2023) inclinations shifts the inferred pulsar mass by
+            more than half a solar mass. A joint, well-constrained inclination from this
+            multi-band light curve is a direct route to resolving that tension.
           </p>
           <Flow
             steps={[
@@ -445,21 +516,20 @@ export default function Page() {
       <section className="mt-16">
         <h2 className="font-display text-2xl text-paper">What Comes Next</h2>
         <div className="mt-4 space-y-5">
-          <p className="text-base leading-relaxed text-paper-dim">Future work on this pipeline includes:</p>
+          <p className="text-base leading-relaxed text-paper-dim">Future work on this project includes:</p>
           <Bullets
             items={[
-              "total flux recovery",
-              "photometric calibration",
-              "completion of the remaining wavelength bands",
+              "running the joint MCMC fit over inclination, fillout factor and the day/night temperatures to convergence",
+              "extending calibration and modelling to the u_s and z_s bands",
+              "deriving a formal posterior uncertainty on the inclination",
               "continued investigation of night-specific and PSF-related systematics",
-              "final multi-band consistency checks",
-              "physical light curve modelling, once the reduction is sufficiently robust",
+              "translating the resulting inclination and mass ratio into a dynamical neutron star mass",
             ]}
           />
           <p className="text-base leading-relaxed text-paper-dim">
-            A reliable, calibrated multi-band orbital light curve would allow the temperature
-            structure and geometry of the companion to be modelled, providing an improved route
-            toward constraining the inclination and neutron star mass of PSR B1957+20.
+            A well-constrained inclination from the joint fit would provide an improved dynamical
+            mass for PSR B1957+20, and a direct way to test whether it sits closer to the van
+            Kerkwijk et al. (2011) or Clark et al. (2023) value.
           </p>
         </div>
       </section>
