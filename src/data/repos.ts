@@ -4,7 +4,6 @@ export type Repo = {
   tags: string[];
   href: string;
   status: "Active" | "Completed";
-  figureLabel: string;
   pipeline: string[];
 };
 
@@ -16,7 +15,6 @@ export const REPOS: Repo[] = [
     tags: ["Python", "Astropy", "Photometry", "Image processing"],
     href: "[Project repository]",
     status: "Active",
-    figureLabel: "[Repository figure]",
     pipeline: ["Raw frames", "Empirical PSF", "PSF matching", "Subtraction", "Light curve"],
   },
   {
@@ -26,7 +24,6 @@ export const REPOS: Repo[] = [
     tags: ["Python", "Numerical modelling", "Astrophysics", "Matplotlib"],
     href: "[Project repository]",
     status: "Active",
-    figureLabel: "[Repository figure]",
     pipeline: ["Binary parameters", "ICARUS model", "Likelihood", "MCMC", "Posterior"],
   },
   {
@@ -36,7 +33,6 @@ export const REPOS: Repo[] = [
     tags: ["Python", "Machine learning", "Signal processing", "Statistical analysis"],
     href: "[Project repository]",
     status: "Completed",
-    figureLabel: "[Repository figure]",
     pipeline: ["Raw ECG", "Denoising", "PQRST detection", "Features", "Classification"],
   },
   {
@@ -45,7 +41,6 @@ export const REPOS: Repo[] = [
     tags: ["Python", "Solar physics", "Image analysis", "Observational astronomy"],
     href: "[Project repository]",
     status: "Completed",
-    figureLabel: "[Repository figure]",
     pipeline: ["Raw frames", "CCD calibration", "Physical flux", "Motion tracking", "Field estimate"],
   },
 ];
