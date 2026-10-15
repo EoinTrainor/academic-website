@@ -67,15 +67,20 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-20">
-        <h2 className="font-display text-2xl text-paper">Beyond physics</h2>
+        <h2 className="font-display text-2xl text-paper">Beyond Physics</h2>
         <div className="mt-4 max-w-2xl space-y-4 text-base leading-relaxed text-paper-dim">
           <p>
-            Outside of physics, I play county-level hurling and follow hurling and sport generally.
-            I enjoy skiing, being outdoors, travelling and experiencing different cultures.
+            Outside of academia, I am a passionate hurler, playing at senior club and county
+            level, and have a keen interest in sport more broadly. I enjoy the outdoors, the odd
+            ski trip, travelling, and experiencing new places and cultures.
           </p>
           <p>
-            I&rsquo;m a trained lifeguard, a licensed forklift and JCB 17m tele-handler operator,
-            and a powerboat licence holder, and I&rsquo;ve also flown a plane.
+            I&rsquo;ve always enjoyed hands-on work and learning practical skills, often pursuing
+            interests well beyond my academic background. I&rsquo;ve worked as a studio labourer
+            on film sets at Titanic Studios in Belfast, gaining experience with everything from
+            leaf blowers to 17-metre telehandlers. I&rsquo;ve also trained as a lifeguard,
+            obtained licences to operate powerboats, forklifts and telehandlers, and even had the
+            opportunity to fly a plane.
           </p>
         </div>
       </div>
