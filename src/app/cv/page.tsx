@@ -10,9 +10,9 @@ const SECTIONS = [
   {
     title: "Education",
     items: [
-      "St Mary's Christian Brothers Grammar School, Glen Road, West Belfast — 2014 – 2021",
-      "BPhys, Physics — Queen's University Belfast, 2021 – 2025",
-      "MSc, Astrophysics — University College Cork, 2026 – 2027",
+      "St Mary's Christian Brothers Grammar School, Glen Road, West Belfast, [2014 – 2021]",
+      "BPhys, Physics — Queen's University Belfast, [2021 – 2025]",
+      "MSc, Astrophysics — University College Cork, [2026 – 2027]",
     ],
   },
   {
@@ -41,9 +41,9 @@ export default function CVPage() {
       />
       <a
         href="#"
-        className="mt-5 inline-block text-sm text-halpha hover:text-paper transition-colors"
+        className="mt-6 inline-flex items-center gap-2 rounded-sm bg-halpha px-6 py-3 text-base font-medium text-ink hover:bg-halpha-dim transition-colors"
       >
-        [Download CV (PDF)]
+        [Download CV (PDF)] ↓
       </a>
 
       <div className="mt-16 space-y-14">
