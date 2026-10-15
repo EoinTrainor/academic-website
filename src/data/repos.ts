@@ -1,3 +1,14 @@
+export type PipelinePalette = {
+  /** Step-box background for non-final steps */
+  light: string;
+  /** Border for non-final steps, and background for the final step */
+  primary: string;
+  /** Border for the final step, and arrow colour */
+  dark: string;
+  /** Text colour on the final (primary-background) step */
+  onPrimary: string;
+};
+
 export type Repo = {
   name: string;
   description: string;
@@ -5,6 +16,7 @@ export type Repo = {
   href: string;
   status: "Active" | "Completed";
   pipeline: string[];
+  palette: PipelinePalette;
 };
 
 export const REPOS: Repo[] = [
@@ -16,6 +28,7 @@ export const REPOS: Repo[] = [
     href: "[Project repository]",
     status: "Active",
     pipeline: ["Raw frames", "Empirical PSF", "PSF matching", "Subtraction", "Light curve"],
+    palette: { light: "#DCE8EB", primary: "#4E7184", dark: "#3A5765", onPrimary: "#FFFFFF" },
   },
   {
     name: "Compact Binary Modelling",
@@ -25,6 +38,7 @@ export const REPOS: Repo[] = [
     href: "[Project repository]",
     status: "Active",
     pipeline: ["Binary parameters", "ICARUS model", "Likelihood", "MCMC", "Posterior"],
+    palette: { light: "#EEDDD6", primary: "#9A665B", dark: "#7A4F46", onPrimary: "#FFFFFF" },
   },
   {
     name: "ECG Machine Learning",
@@ -34,6 +48,7 @@ export const REPOS: Repo[] = [
     href: "[Project repository]",
     status: "Completed",
     pipeline: ["Raw ECG", "Denoising", "PQRST detection", "Features", "Classification"],
+    palette: { light: "#E1E9DC", primary: "#67816B", dark: "#4F6554", onPrimary: "#FFFFFF" },
   },
   {
     name: "Solar H-alpha Analysis",
@@ -42,5 +57,6 @@ export const REPOS: Repo[] = [
     href: "[Project repository]",
     status: "Completed",
     pipeline: ["Raw frames", "CCD calibration", "Physical flux", "Motion tracking", "Field estimate"],
+    palette: { light: "#F1E4CD", primary: "#BE8746", dark: "#9C6D37", onPrimary: "#201C16" },
   },
 ];
