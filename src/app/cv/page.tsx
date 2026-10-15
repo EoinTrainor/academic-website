@@ -10,8 +10,9 @@ const SECTIONS = [
   {
     title: "Education",
     items: [
-      "Research Master's, Astrophysics — University College Cork, Jan 2026 – Jan 2027",
+      "St Mary's Christian Brothers Grammar School, Glen Road, West Belfast — 2014 – 2021",
       "BPhys, Physics — Queen's University Belfast, 2021 – 2025",
+      "MSc, Astrophysics — University College Cork, 2026 – 2027",
     ],
   },
   {
@@ -44,7 +45,10 @@ const SECTIONS = [
 export default function CVPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 pb-24 pt-14 md:px-10">
-      <SectionHeader heading="CV" intro="A summary of education, research and technical skills." />
+      <SectionHeader
+        heading="Curriculum Vitae"
+        intro="A summary of education, research and technical skills."
+      />
 
       <div className="mt-16 space-y-14">
         {SECTIONS.map((section) => (
