@@ -10,9 +10,9 @@ const SECTIONS = [
   {
     title: "Education",
     items: [
-      "St Mary's Christian Brothers Grammar School, Glen Road, West Belfast, [2014 – 2021]",
-      "BPhys, Physics — Queen's University Belfast, [2021 – 2025]",
-      "MSc, Astrophysics — University College Cork, [2026 – 2027]",
+      "St Mary's Christian Brothers Grammar School, Glen Road, West Belfast, (2014 – 2021)",
+      "BPhys, Physics — Queen's University Belfast, (2021 – 2025)",
+      "MSc, Astrophysics — University College Cork, (2026 – 2027)",
     ],
   },
   {
