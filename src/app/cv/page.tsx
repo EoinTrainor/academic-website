@@ -3,7 +3,7 @@ import SectionHeader from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
   title: "CV",
-  description: "Curriculum vitae — education, research and technical skills.",
+  description: "Curriculum vitae — education, research and presentations.",
 };
 
 const SECTIONS = [
@@ -18,26 +18,16 @@ const SECTIONS = [
   {
     title: "Research",
     items: [
-      "GX 339−4 — dynamical black hole mass measurement via infrared difference imaging and light-curve modelling",
-      "PSR B1957+20 — difference-imaging photometric pipeline for orbital variability",
+      "GX 339−4 — dynamical black hole mass measurement via near-infrared difference imaging and light-curve modelling",
+      "PSR B1957+20 — pipeline for crowded-field photometry and light-curve modelling to constrain the mass of a neutron star",
       "Solar chromosphere — narrow-band H-alpha observations (undergraduate)",
-      "Machine learning for ECG classification — award-winning undergraduate project",
-    ],
-  },
-  {
-    title: "Technical skills",
-    items: [
-      "Python — Astropy, Photutils, NumPy, SciPy, Matplotlib, Astroalign, SEP",
-      "Difference imaging — ZOGY-style pipelines, empirical PSF construction",
-      "Statistical inference — MCMC / Bayesian parameter estimation",
-      "Binary light-curve modelling — ICARUS",
-      "Machine learning and signal processing",
+      "Machine learning for ECG diagnostics using medical data — award-winning undergraduate project",
     ],
   },
   {
     title: "Presentations",
     items: [
-      'Irish National Astronomy Meeting (INAM), 2026 — "Difference Imaging and Multi-Band Light Curve Analysis of High Energy Binary Systems"',
+      'Irish National Astronomy Meeting (INAM), 2026 — Talk on "Difference Imaging and Multi-Band Light Curve Analysis of High Energy Binary Systems"',
     ],
   },
 ];
@@ -47,7 +37,7 @@ export default function CVPage() {
     <div className="mx-auto max-w-3xl px-6 pb-24 pt-14 md:px-10">
       <SectionHeader
         heading="Curriculum Vitae"
-        intro="A summary of education, research and technical skills."
+        intro="A summary of education, research and presentations."
       />
 
       <div className="mt-16 space-y-14">
