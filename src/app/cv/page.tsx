@@ -18,10 +18,10 @@ const SECTIONS = [
   {
     title: "Research",
     items: [
-      "GX 339−4 — dynamical black hole mass measurement via near-infrared difference imaging and light-curve modelling",
-      "PSR B1957+20 — pipeline for crowded-field photometry and light-curve modelling to constrain the mass of a neutron star",
-      "Solar chromosphere — narrow-band H-alpha observations (undergraduate)",
-      "Machine learning for ECG diagnostics using medical data — award-winning undergraduate project",
+      "GX 339−4: dynamical black hole mass measurement via near-infrared difference imaging and light-curve modelling",
+      "PSR B1957+20: pipeline for crowded-field photometry and light-curve modelling to constrain the mass of a neutron star",
+      "Solar chromosphere: narrow-band H-alpha observations (undergraduate)",
+      "Machine learning for ECG diagnostics using medical data: award-winning undergraduate project",
     ],
   },
   {
@@ -39,6 +39,12 @@ export default function CVPage() {
         heading="Curriculum Vitae"
         intro="A summary of education, research and presentations."
       />
+      <a
+        href="#"
+        className="mt-5 inline-block text-sm text-halpha hover:text-paper transition-colors"
+      >
+        [Download CV (PDF)]
+      </a>
 
       <div className="mt-16 space-y-14">
         {SECTIONS.map((section) => (
